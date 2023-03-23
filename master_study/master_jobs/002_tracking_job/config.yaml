@@ -1,8 +1,8 @@
 # Description of the xline
-xline_json :    '../001_machine_model/line_bb_for_tracking.json'
+xline_json :    '../../line_bb_for_tracking.json'
 
 # distribution in the normalized xy space
-particle_file:  '../000_make_part_distribution/particles/000.parquet'
+particle_file:  '../000_make_part_distribution/transverse_distr.parquet'
 
 # tracking
 n_turns    :    100     # number of turns to track
