@@ -4,7 +4,7 @@
 
 Do 
 ```
-git clone git@github.com:xsuite/example_DA_study.git -b release/v0.1.1
+git clone git@github.com:andrew960/example_DA_study.git -b release/v0.1.1
 ```
 
 then 
