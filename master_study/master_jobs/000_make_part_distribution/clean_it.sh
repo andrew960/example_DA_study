@@ -1,2 +1,1 @@
-rm -rf distrib*
-rm -rf part*
+rm -rf transverse_distr.parquet

@@ -1,3 +1,3 @@
-rm -f *parquet
-rm -rf __pycache__
-rm -f tree_maker.*
+rm *.parquet
+rm __pycache__/*
+rmdir __pycache__

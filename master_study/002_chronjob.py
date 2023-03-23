@@ -165,15 +165,15 @@ if __name__=='__main__':
             my_file = 'second_generation.sub'
             my_run_on.create_sub_file(root.generation(2), my_file)
             my_run_on.submit(my_file)
-            if all([node.has_been('completed') for
-                   node in root.generation(2)]):
-                my_run_on = cluster(root
-                                    .parameters['generations']['3']['run_on'])
-                my_file = 'third_generation.sub'
-                my_run_on.create_sub_file(root.generation(3),
-                                           'third_generation.sub')
-                my_run_on.submit(my_file)
-#          node.smart_run()
+#             if all([node.has_been('completed') for
+#                    node in root.generation(2)]):
+#                 my_run_on = cluster(root
+#                                     .parameters['generations']['3']['run_on'])
+#                 my_file = 'third_generation.sub'
+#                 my_run_on.create_sub_file(root.generation(3),
+#                                            'third_generation.sub')
+#                 my_run_on.submit(my_file)
+# #          node.smart_run()
         if all([descendant.has_been('completed')
                 for descendant in root.descendants]):
             root.tag_as('completed')

@@ -1,1 +1,2 @@
+n_part    :    1000     # number of particles
 log_file: 'tree_maker.log'

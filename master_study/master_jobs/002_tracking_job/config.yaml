@@ -1,16 +1,10 @@
----
 # Description of the xline
-xline_json :    '../001_machine_model/xsuite_lines/line_bb_for_tracking.json'
+xline_json :    '../001_machine_model/line_bb_for_tracking.json'
 
 # distribution in the normalized xy space
 particle_file:  '../000_make_part_distribution/particles/000.parquet'
 
-# metric
-epsn_1     :    2.5e-6   # normalised emittance x
-epsn_2     :    2.5e-6   # normalised emittance y
-delta_max  :    27.e-5   # initial off-momentum
-
 # tracking
-n_turns    :    1000     # number of turns to track
+n_turns    :    100     # number of turns to track
 
 log_file   :    'tree_maker.log'

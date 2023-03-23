@@ -1,5 +1,5 @@
 'root':
-  setup_env_script: '/home/sterbini/2022_08_08_wires/example_DA_study/miniconda/bin/activate'
+  setup_env_script: '/afs/cern.ch/work/a/afornara/public/23_03_23/newpy/miniconda/bin/activate'
   generations:
     1: # Make the particle distribution
       job_folder: 'master_jobs/000_make_part_distribution'
@@ -7,44 +7,28 @@
       files_to_clone: # relative to the template folder
         - clean_it.sh
       run_on: 'local_pc'
-    2: # Launch the pymask and prepare the xlines
-      job_folder: 'master_jobs/001_machine_model'
-      job_executable: 000_pymask.py # has to be a python file
-      files_to_clone: # relative to the template folder
-        - optics_specific_tools.py
-        - clean_it.sh
-      run_on: 'local_pc' #'htc'
-      htc_job_flavor: 'microcentury' # optional parameter to define job flavor, default is espresso
-    3: # Launch the tracking
+    2: # Launch the tracking
       job_folder: 'master_jobs/002_tracking_job'
       job_executable: 000_track.py # has to be a python file
       files_to_clone: # relative to the template folder
         - clean_it.sh
+        - utilsaf.py
       run_on: 'local_pc' #'htc'
       htc_job_flavor: 'tomorrow' # optional parameter to define job flavor, default is espress
-  use_yaml_children: true
+  use_yaml_children: False
   # first generation
   children:
-    '000_make_particle':
+    '000_create_distributions':
       children:
-        '000_madx':
-          qx0: 62.31
-          qy0: 60.32
-          test: 'test'
-          children:
-            '000_xsuite':
-              particle_file: '../../particles/000.parquet' 
-              xline_json:  '../xsuite_lines/line_bb_for_tracking.json'
-              n_turns: 1000
-            '001_xsuite':
-              particle_file: '../../particles/000.parquet' 
-              xline_json:  '../xsuite_lines/line_bb_for_tracking.json'
-              n_turns: 2000
-        '001_madx':
-          qx0: 62.313
-          qy0: 60.318
-          children:
-            '000_xsuite':
-              particle_file: '../../particles/000.parquet' 
-              xline_json:  '../xsuite_lines/line_bb_for_tracking.json'
-              n_turns: 1000
+        '000_tracking':
+          xline_json :    '../../line_bb_for_tracking.json'
+          # distribution in the normalized xy space
+          particle_file:  '../transverse_distr.parquet'
+          n_turns: 100
+    '001_create_distributions':
+      children:
+          '000_tracking':
+            xline_json :    '../../line_bb_for_tracking.json'
+            # distribution in the normalized xy space
+            particle_file:  '../transverse_distr.parquet'
+            n_turns: 100

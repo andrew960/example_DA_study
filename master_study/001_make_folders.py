@@ -15,34 +15,44 @@ from user_defined_functions import generate_run_sh_htc
 config=yaml.safe_load(open('config.yaml'))
 
 
-# The user defines the variable to scan
-# machine parameters scans
-qx0 = np.arange(62.305, 62.330, 0.001)[:]
-qy0 = np.arange(60.305, 60.330, 0.001)[:]
 
-study_name = "HL_tunescan_20cm"
+# # The user defines the variable to scan
+# # machine parameters scans
+# qx0 = np.arange(62.305, 62.330, 0.001)[:]
+# qy0 = np.arange(60.305, 60.330, 0.001)[:]
+
 
 children={}
-children[study_name] = {}
-children[study_name]["children"] = {}
 
-for optics_job, (myq1, myq2) in enumerate(itertools.product(qx0, qy0)):
-    optics_children={}
-    children[study_name]["children"][f'madx_{optics_job:03}'] = {
-                                    'qx0':float(myq1),
-                                    'qy0':float(myq2),
-                                    'children':optics_children}
-    for track_job in range(15):
-        optics_children[f'xsuite_{track_job:03}'] = {
-                    'particle_file': ('../../'
-                                   f'distrib_abc/{track_job:03}.parquet'),
-                    'xline_json': ('../xsuite_lines/'
-                                  'line_bb_for_tracking.json'),
-                    'n_turns': int(1000000)}
+for idx in range(5):
+    track_children={}
+    children[f'{idx:03}_part'] = {
+                                    'npart':int(1000),
+                                    'children':track_children}
+    track_children['000_track'] ={
+        'xline_json': '../../line_bb_for_tracking.json',
+        'particle_file': '../transverse_distr.parquet',
+        'n_turns': 100            # number of turns to track
+    } 
+
+
+# for optics_job, (myq1, myq2) in enumerate(itertools.product(qx0, qy0)):
+#     optics_children={}
+#     children[study_name]["children"][f'madx_{optics_job:03}'] = {
+#                                     'qx0':float(myq1),
+#                                     'qy0':float(myq2),
+#                                     'children':optics_children}
+#     for track_job in range(15):
+#         optics_children[f'xsuite_{track_job:03}'] = {
+#                     'particle_file': ('../../'
+#                                 f'distrib_abc/{track_job:03}.parquet'),
+#                     'xline_json': ('../xsuite_lines/'
+#                                 'line_bb_for_tracking.json'),
+#                     'n_turns': int(1000000)}
 
 if config['root']['use_yaml_children']== False:
     config['root']['children'] = children
-config['root']['setup_env_script'] = os.getcwd() + '/../miniconda/bin/activate'
+# config['root']['setup_env_script'] = os.getcwd() + '/../miniconda/bin/activate'
 
 # Create tree object
 start_time = time.time()
