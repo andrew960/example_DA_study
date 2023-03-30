@@ -14,8 +14,8 @@
         - clean_it.sh
         - utilsaf.py
       run_on: 'local_pc' #'htc'
-      htc_job_flavor: 'tomorrow' # optional parameter to define job flavor, default is espress
-  use_yaml_children: False
+      htc_job_flavor: 'espresso' # optional parameter to define job flavor, default is espress
+  use_yaml_children: True
   # first generation
   children:
     '000_create_distributions':
