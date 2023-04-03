@@ -54,13 +54,13 @@ except ImportError:
 print(f"\n\nCrab Cavities+Noise and Beam Beam study")
 #Choose context, line, N of turns, emittances...
 #------------------------------------------------------------
-#ctx = xo.ContextCupy(device = 3) #Code is intended for GPU
-ctx = xo.ContextCpu()
+ctx = xo.ContextCupy() #Code is intended for GPU
+#ctx = xo.ContextCpu()
 print('Top energy optics selected')
-p0c = 7000e9
-sigma_z = 7.5e-2
-normal_emitt_x = 2.5e-6#m*rad
-normal_emitt_y = 2.5e-6 #m*rad
+p0c = config['p0c']
+sigma_z = config['sigma_z']
+normal_emitt_x = config['normal_emitt_x']
+normal_emitt_y = config['normal_emitt_y']
 
 input = config['xline_json']#'../001_machine_model/line_bb_for_tracking.json'
 
@@ -119,7 +119,8 @@ y_in_sigmas = df['y_in_sigmas'].values
 py_in_sigmas = df['py_in_sigmas'].values
 
 N_particles = len(x_in_sigmas)
-bunch_intensity = 2.2e11
+
+bunch_intensity = config['bunch_intensity']
 zeta, delta = xp.generate_longitudinal_coordinates(
     particle_ref=p0_normal,
     num_particles=N_particles, distribution='gaussian',
@@ -160,22 +161,26 @@ mu_pn = np.zeros(16)
 mu_ps = np.zeros(16)
 jj = 0
 for elem in line.element_dict :
-        if isinstance(line.element_dict[elem],xt.beam_elements.elements.RFMultipole): 
-            mu_knl[jj]=line.element_dict[elem].knl[0]
-            mu_ksl[jj]=line.element_dict[elem].ksl[0]
-            mu_pn[jj]=line.element_dict[elem].pn
-            mu_ps[jj]=line.element_dict[elem].ps
-            jj+=1
-phnoise = 8e-6
-anoise = 1e-11#14e-10
-ph_noise = generate_phase_noise(ph_noise_rad = phnoise, ph_noise_mu = 0,scale_noise = scale_noise, turns = N)
-a_noise = generate_amplitude_noise(a_noise_mu = 0, a_noise_sigma = anoise,scale_noise = scale_noise, turns = N)
+    if isinstance(line.element_dict[elem],xt.beam_elements.elements.RFMultipole): 
+        mu_knl[jj]=line.element_dict[elem].knl[0]
+        mu_ksl[jj]=line.element_dict[elem].ksl[0]
+        mu_pn[jj]=line.element_dict[elem].pn
+        mu_ps[jj]=line.element_dict[elem].ps
+        jj+=1
+
+
+with open(config['noise_file'], 'rb') as f:
+    ph_noise = np.load(f)
+    a_noise =np.load(f)
 radtodeg = 180/np.pi
+
+
 print(f'Phase noise mu = {np.mean(ph_noise[0]/radtodeg)}, var = {np.var(ph_noise[0]/radtodeg)}')
 print(f'Amplitude noise mu = {np.mean(a_noise[0])}, var = {np.var(a_noise[0])}')
 jj = 0
 start = time.time()
 print("Begin tracking N_particles = ", N_particles)
+print("Total turns =", N)
 print('------------------------------------')
 for ii in range(N):
     if(ii<=1024):
@@ -231,7 +236,7 @@ for ii in range(N):
         emits_y[jj]=ey
         jj+=1
 
-    if(ii%11 == 0):
+    if(ii%111111 == 0):
         end = time.time()
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
@@ -259,12 +264,15 @@ states_f = np.array(states_f)
 
 #save xs_i,ys_i to a parquet file
 df_i = pd.DataFrame({'x':xs_i.flatten(),'px':pxs_i.flatten(),'y':ys_i.flatten(),'py':pys_i.flatten(),'zeta':zetas_i.flatten(),'delta':deltas_i.flatten(),'state':states_i.flatten()})
+print('initial =',df_i)
 df_i.to_parquet('initial_state.parquet')
 #save xs_f,ys_f to a parquet file
 df_f = pd.DataFrame({'x':xs_f.flatten(),'px':pxs_f.flatten(),'y':ys_f.flatten(),'py':pys_f.flatten(),'zeta':zetas_f.flatten(),'delta':deltas_f.flatten(),'state':states_f.flatten()})
-df_f.to_parquet('final_state.parquet')
+print('final =',df_f)
+df_f.to_parquet('ending_state.parquet')
+
 #save emits_x,emits_y, ph_noise,a_noise to a parquet file
-df_e = pd.DataFrame({'ex':emits_x.flatten(),'ey':emits_y.flatten(),'ph_noise':np.array(ph_noise[0]).flatten(),'a_noise':np.array(a_noise[0]).flatten()})
+df_e = pd.DataFrame({'ex':emits_x.flatten(),'ey':emits_y.flatten()})
 df_e.to_parquet('others.parquet')
 
 if tree_maker is not None:

@@ -3,6 +3,14 @@ xline_json :    '../../line_bb_for_tracking.json'
 
 # distribution in the normalized xy space
 particle_file:  '../000_make_part_distribution/transverse_distr.parquet'
+p0c : 7000.0e+9 
+sigma_z : 7.5e-2
+normal_emitt_x : 2.5e-6 #m*rad
+normal_emitt_y : 2.5e-6 #m*rad
+bunch_intensity : 2.2e+11 
+
+#noise file
+noise_file : '../../noise.py'
 
 # tracking
 n_turns    :    100     # number of turns to track
