@@ -108,76 +108,97 @@ p0_df = pd.DataFrame({
                     'delta':ctx.nparray_from_context_array(p0_normal.delta),
                     })
 print('dataframe ready')
-#Generating the particles
+#Creating Halo
+freq = 400789598.98582596#1/8.892446333483922e-05
+c = 299792458
+length = tw_normal['circumference']
+q0 = 1
+voltage = 16e6
+slip_factor = tw_normal['slip_factor']
+beta0 = particle_0.beta0
+A = q0*voltage/(2.*np.pi*freq*p0c/c*length)
+B = 2*np.pi*freq/c
+C = abs(slip_factor)/(2.*beta0*beta0)
+xx = np.linspace(-np.pi/B, np.pi/B, 10000)
+xx2 = np.linspace(-np.pi/B, np.pi/B, 10000)
+yy = np.sqrt(2*A/C) * np.cos(B/2.*xx)
+yy2 = 0.98*np.sqrt(2*A/C) * np.cos(B/2.*xx)
+n_part = int(2.5e5)
+sigma_z=7.5e-2
+sigma_dp = 9.66128190911531e-05
+(zeta_in_sigmas, delta_in_sigmas, r_points, theta_points
+    )= xp.generate_2D_uniform_circular_sector(
+                                        num_particles=n_part,
+                                        r_range=(0, 6), # sigmas
+                                        theta_range=(0, 2*np.pi))
 
+z = []
+dp = []
+#plt.plot(zuni, duni, 'o', markersize=1,alpha = 1)
+enclose = 0.98
+for ii in range(len(delta_in_sigmas)):
+    if(delta_in_sigmas[ii]*sigma_dp< enclose*np.sqrt(2*A/C) * np.cos(B/2.*zeta_in_sigmas[ii]/enclose*sigma_z)and(delta_in_sigmas[ii]*sigma_dp> -enclose*np.sqrt(2*A/C) * np.cos(B/2.*zeta_in_sigmas[ii]/enclose*sigma_z))):
+        z.append(zeta_in_sigmas[ii])
+        dp.append(delta_in_sigmas[ii])
+n_sigma = 6.0
+n_part = len(z)
 
-# distr = config['particle_file']
-# df = pq.read_table(distr).to_pandas()
-# x_in_sigmas = df['x_in_sigmas'].values
-# px_in_sigmas = df['px_in_sigmas'].values
-# y_in_sigmas = df['y_in_sigmas'].values
-# py_in_sigmas = df['py_in_sigmas'].values
+x  = np.zeros(n_part)
+px = np.zeros(n_part)
+y  = np.zeros(n_part)
+py = np.zeros(n_part)
+z = np.array(z)
+dp = np.array(dp)
 
-N_particles = 20000
+def cmp_weights(df):
+    r2 = df['x']**2 + df['px']**2 + df['y']**2 + df['py']**2
+    w = np.exp(-r2/2.)
+    r2_l = df['z']**2 + df['dp']**2
+    w *=np.exp(-r2_l/2.)
+    w/=np.sum(w)
+    return w
 
-bunch_intensity = config['bunch_intensity']
-# zeta, delta = xp.generate_longitudinal_coordinates(
-#     particle_ref=p0_normal,
-#     num_particles=N_particles, distribution='gaussian',
-#     sigma_z=7.5e-2, tracker=tracker_normal)
+def generate_pseudoKV_xpyp(i):
+  not_generated = True
+  while not_generated:
+    u = np.random.normal(size=4)
+    r = np.sqrt(np.sum(u**2))
+    u *= n_sigma/r
+    v = np.random.normal(size=4)
+    r = np.sqrt(np.sum(v**2))
+    v *= n_sigma/r
+    R2 = u[0]**2 + u[1]**2 + v[0]**2 + v[1]**2 
+    if R2 <= n_sigma**2:
+        x[i]  = u[0]
+        px[i] = u[1]
+        y[i]  = v[0]
+        py[i] = v[1]
+        #z[i] = u[0]
+        #dp[i] = v[1]
+        not_generated = False
+  return 
+list(map(generate_pseudoKV_xpyp, range(len(x))))
 
-# particles = xp.build_particles(
-#     tracker=tracker_normal,
-#     particle_ref=p0_normal,
-#     zeta=zeta, delta=delta,
-#     x_norm=x_in_sigmas, px_norm=px_in_sigmas,
-#     y_norm=y_in_sigmas, py_norm=py_in_sigmas,
-#     scale_with_transverse_norm_emitt=(normal_emitt_x, normal_emitt_y))
+df = pd.DataFrame({'x':x , 'y': y, 'px': px, 'py': py, 'z': z, 'dp':dp})
+df['weights'] = cmp_weights(df)
 
-# print('Generating N_particles =', N_particles)
-# particles = xp.generate_matched_gaussian_bunch(
-#                 num_particles=N_particles, total_intensity_particles=bunch_intensity,
-#                 nemitt_x=normal_emitt_x, nemitt_y=normal_emitt_y, sigma_z=sigma_z,
-#                 particle_ref=p0_normal,
-#                 tracker=tracker_normal)
-
-qx = 1.1
-q_prime_x = (1+qx)/(3-qx)
-U1x = np.random.uniform(size = N_particles)
-U2x = np.random.uniform(size = N_particles)
-basex = q_prime_x
-
-Rx = np.sqrt(-2 * log_q(q_prime_x, U1x))
-Thetax = 2 * np.pi * U2x
-x_in_sigmas = Rx * np.cos(Thetax)
-px_in_sigmas= Rx * np.sin(Thetax)
-
-qy = 1.1
-q_prime_y = (1+qy)/(3-qy)
-U1y = np.random.uniform(size = N_particles)
-U2y = np.random.uniform(size = N_particles)
-basey = q_prime_y
-
-Ry = Rx#np.sqrt(-2 * log_q(q_prime_y, U1y))
-Thetay = 2 * np.pi * U2y
-y_in_sigmas = Rx * np.cos(Thetay)
-py_in_sigmas = Rx * np.sin(Thetay)
-
-
-
-
-zeta, delta = xp.generate_longitudinal_coordinates(
-    particle_ref=p0_normal,
-    num_particles=N_particles, distribution='gaussian',
-    sigma_z=7.5e-2, tracker=tracker_normal)
+x_in_sigmas = np.array(df['x'])
+y_in_sigmas = np.array(df['y'])
+px_in_sigmas = np.array(df['px'])
+py_in_sigmas = np.array(df['py'])
+z_in_sigmas = np.array(df['z'])
+dp_in_sigmas = np.array(df['dp'])
 
 particles = xp.build_particles(
     tracker=tracker_normal,
     particle_ref=p0_normal,
-    zeta=zeta, delta=delta,
+    zeta=z*sigma_z, delta=dp*sigma_dp,
     x_norm=x_in_sigmas, px_norm=px_in_sigmas,
     y_norm=y_in_sigmas, py_norm=py_in_sigmas,
     scale_with_transverse_norm_emitt=(normal_emitt_x, normal_emitt_y))
+
+N_particles = len(z_in_sigmas)
+
 
 print('Generation complete')
 xs_i = []
@@ -224,12 +245,14 @@ radtodeg = 180/np.pi
 print(f'Phase noise mu = {np.mean(ph_noise[0]/radtodeg)}, var = {np.var(ph_noise[0]/radtodeg)}')
 print(f'Amplitude noise mu = {np.mean(a_noise[0])}, var = {np.var(a_noise[0])}')
 jj = 0
+np.savez('halostudy_parameters.npz', N_particles=N_particles, N=N, a_noise=a_noise, ph_noise=ph_noise, sampling = 33333)
 start = time.time()
 print("Begin tracking N_particles = ", N_particles)
 print("Total turns =", N)
 print('------------------------------------')
+aa = 0
 for ii in range(N):
-    if(ii<=100):
+    if(ii%33333 == 0):
         xs_i.append(ctx.nparray_from_context_array(particles.x))
         pxs_i.append(ctx.nparray_from_context_array(particles.px)) 
         ys_i.append(ctx.nparray_from_context_array(particles.y))
@@ -237,60 +260,36 @@ for ii in range(N):
         zetas_i.append(ctx.nparray_from_context_array(particles.zeta))
         deltas_i.append(ctx.nparray_from_context_array(particles.delta))
         states_i.append(ctx.nparray_from_context_array(particles.state))
-    if(ii>=N-100):
-        xs_f.append(ctx.nparray_from_context_array(particles.x))
-        pxs_f.append(ctx.nparray_from_context_array(particles.px)) 
-        ys_f.append(ctx.nparray_from_context_array(particles.y))
-        pys_f.append(ctx.nparray_from_context_array(particles.py))
-        zetas_f.append(ctx.nparray_from_context_array(particles.zeta))
-        deltas_f.append(ctx.nparray_from_context_array(particles.delta))
-        states_f.append(ctx.nparray_from_context_array(particles.state))
-    if(True):
-        set_crabs_IP5(line,'acfgav.4bl5.b1',0,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-        set_crabs_IP5(line,'acfgav.4al5.b1',2,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-        set_crabs_IP5(line,'acfgav.4ar5.b1',4,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-        set_crabs_IP5(line,'acfgav.4br5.b1',6,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-
-        set_crabs_IP1(line,'acfgah.4bl1.b1',9,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-        set_crabs_IP1(line,'acfgah.4al1.b1',11,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-        set_crabs_IP1(line,'acfgah.4ar1.b1',13,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-        set_crabs_IP1(line,'acfgah.4br1.b1',15,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
-
-    if(ii%1==0):
-        #calculating emittance        
-        xs_ = ctx.nparray_from_context_array(particles.x)
-        pxs_ = ctx.nparray_from_context_array(particles.px)
-        ys_ = ctx.nparray_from_context_array(particles.y)
-        pys_ = ctx.nparray_from_context_array(particles.py)
-        delta_ = ctx.nparray_from_context_array(particles.delta)
-        states_ = ctx.nparray_from_context_array(particles.state)
-        p0_ = ctx.nparray_from_context_array(particles.p0c[0])
-
-        xs_1 = np.array(xs_)
-        pxs_1 = np.array(pxs_)
-        ys_1= np.array(ys_)
-        pys_1 = np.array(pys_)
-        delta_1 = np.array(delta_)
-        states_1 = np.array(states_)
-
-        cut_x = np.abs(xs_1)<6*sigma_x
-        cut_y = np.abs(ys_1)<6*sigma_y
-
-        ex = emittance(xs_1[cut_x],pxs_1[cut_x],delta_1[cut_x],dx_3,dpx_3)*particle_0.gamma0*particle_0.beta0
-        ey = emittance(ys_1[cut_y],pys_1[cut_y],delta_1[cut_y],dy_3,dpy_3)*particle_0.gamma0*particle_0.beta0
-        emits_x[jj]=ex
-        emits_y[jj]=ey
-        jj+=1
-
-    if(ii%111111 == 0):
+        gemittx = normal_emitt_x/particle_0.gamma0/particle_0.beta0
+        scale = 1/(np.sqrt(gemittx))
+        X_i = get_normalized_phase_space(ctx.nparray_from_context_array(particles.x)-ctx.nparray_from_context_array(particles.delta)*dx_3,ctx.nparray_from_context_array(particles.px)-ctx.nparray_from_context_array(particles.delta)*dpx_3,betx_3,alphx_3,scale)
+        Y_i = get_normalized_phase_space(ctx.nparray_from_context_array(particles.y)-ctx.nparray_from_context_array(particles.delta)*dy_3,ctx.nparray_from_context_array(particles.py)-ctx.nparray_from_context_array(particles.delta)*dpy_3,bety_3,alphy_3,scale)
+        Z_i = ctx.nparray_from_context_array(particles.zeta)/sigma_z
+        DP_i = ctx.nparray_from_context_array(particles.delta)/sigma_dp
+        df_normalized = pd.DataFrame({'x':X_i[0].flatten(),'px':X_i[1].flatten(),'y':Y_i[0].flatten(),'py':Y_i[1].flatten(),'z':Z_i.flatten(),'dp':DP_i.flatten(),'states':ctx.nparray_from_context_array(particles.state)})
+        df_normalized['weights'] = cmp_weights(df)
+        df_normalized.to_parquet(f'halostudy_normalized_{aa}.parquet')
+        aa+=1
         end = time.time()
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         print('Round = ',ii,'Time(s) = ',end-start,'Current Time =', current_time)
         currstates = ctx.nparray_from_context_array(particles.state)
-        print('Emittance x = ',ex,'Emittance y = ',ey)
         print('Lost particles = ', len(currstates[currstates == -1]))
+        if(True):
+            set_crabs_IP5(line,'acfgav.4bl5.b1',0,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+            set_crabs_IP5(line,'acfgav.4al5.b1',2,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+            set_crabs_IP5(line,'acfgav.4ar5.b1',4,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+            set_crabs_IP5(line,'acfgav.4br5.b1',6,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+
+            set_crabs_IP1(line,'acfgah.4bl1.b1',9,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+            set_crabs_IP1(line,'acfgah.4al1.b1',11,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+            set_crabs_IP1(line,'acfgah.4ar1.b1',13,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+            set_crabs_IP1(line,'acfgah.4br1.b1',15,ii,a_noise,ph_noise,mu_knl,mu_ksl,mu_pn,mu_ps)
+
     tracker_normal.track(particles, num_turns=sampling,turn_by_turn_monitor=False)
+
+
 
 xs_i = np.array(xs_i)
 pxs_i = np.array(pxs_i)
@@ -300,26 +299,10 @@ zetas_i = np.array(zetas_i)
 deltas_i = np.array(deltas_i)
 states_i = np.array(states_i)
 
-xs_f = np.array(xs_f)
-pxs_f = np.array(pxs_f)
-ys_f = np.array(ys_f)
-pys_f = np.array(pys_f)
-zetas_f = np.array(zetas_f)
-deltas_f = np.array(deltas_f)
-states_f = np.array(states_f)
 
-#save xs_i,ys_i to a parquet file
-df_i = pd.DataFrame({'x':xs_i.flatten(),'px':pxs_i.flatten(),'y':ys_i.flatten(),'py':pys_i.flatten(),'zeta':zetas_i.flatten(),'delta':deltas_i.flatten(),'state':states_i.flatten()})
-print('initial =',df_i)
-df_i.to_parquet('initial_state.parquet')
-#save xs_f,ys_f to a parquet file
-df_f = pd.DataFrame({'x':xs_f.flatten(),'px':pxs_f.flatten(),'y':ys_f.flatten(),'py':pys_f.flatten(),'zeta':zetas_f.flatten(),'delta':deltas_f.flatten(),'state':states_f.flatten()})
-print('final =',df_f)
-df_f.to_parquet('ending_state.parquet')
-
-#save emits_x,emits_y, ph_noise,a_noise to a parquet file
-df_e = pd.DataFrame({'ex':emits_x.flatten(),'ey':emits_y.flatten()})
-df_e.to_parquet('others.parquet')
+#save xs_i, pxs_i, ys_i, pys_i, zetas_i, deltas_i, states_i in parquet file
+df_physical = pd.DataFrame({'x':xs_i.flatten(),'px':pxs_i.flatten(),'y':ys_i.flatten(),'py':pys_i.flatten(),'z':zetas_i.flatten(),'dp':deltas_i.flatten(),'states':states_i.flatten()})
+df_physical.to_parquet('halostudy_physical_.parquet')
 
 if tree_maker is not None:
     tree_maker.tag_json.tag_it(config['log_file'], 'completed')
