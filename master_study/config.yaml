@@ -14,7 +14,7 @@
         - clean_it.sh
         - utilsaf.py
       run_on: 'htc_GPU' #'htc','htc_GPU'
-      htc_job_flavor: 'tomorrow' # optional parameter to define job flavor, default is espress
+      htc_job_flavor: 'testmatch' # optional parameter to define job flavor, default is espress
   use_yaml_children: False
   # first generation
   children:

@@ -39,17 +39,17 @@ if True:
             with open(f'{node_child.get_abs_path()}/config.yaml','r') as fid:
                  config=yaml.safe_load(fid)
             try:
-                df_i=pd.read_parquet(
-                     f'{node_child.get_abs_path()}/initial_state.parquet')
-                print('Initial =',df_i)
-                df_f=pd.read_parquet(
-                     f'{node_child.get_abs_path()}/ending_state.parquet')
-                print('Final =',df_f)
+                # df_i=pd.read_parquet(
+                #      f'{node_child.get_abs_path()}/initial_state.parquet')
+                # print('Initial =',df_i)
+                # df_f=pd.read_parquet(
+                #      f'{node_child.get_abs_path()}/ending_state.parquet')
+                # print('Final =',df_f)
                 df_others = pd.read_parquet(
-                     f'{node_child.get_abs_path()}/others.parquet')
+                      f'{node_child.get_abs_path()}/others.parquet')
                 print('Others =',df_others)
-                my_list.append(df_i)
-                my_list.append(df_f)
+                #my_list.append(df_i)
+                #my_list.append(df_f)
                 my_list.append(df_others)
             except:
                 problematic.append(node_child.get_abs_path())

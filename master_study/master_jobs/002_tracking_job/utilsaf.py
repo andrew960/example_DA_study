@@ -150,3 +150,35 @@ def get_normalized_phase_space(x, px, beta, alpha, scale):
     X =np.array([x,px])
     return np.linalg.inv(P)@X*scale
 
+def log_q(q,x):
+    ''' 
+    q = 1 -> log(x)
+    x < 0 -> undefined
+    q not 1, x > 0 -> x**(1-q) -1)/(1-q)
+    ''' 
+    if min(x) < 0:
+        return 'error: x is smaller than 0'
+    if q==1:
+        return np.log(x)
+    else:
+        value = (x**(1-q) -1)/(1-q)
+        return value
+    
+    
+def box_muller_q_gauss(q, N):
+    
+    '''
+    Generates 2 q-Gaussian distributions, but NOT independent
+    '''
+    q_prime = (1+q)/(3-q)
+    U1 = np.random.uniform(size = N)
+    U2 = np.random.uniform(size = N)
+    
+    R = np.sqrt(-2 * log_q(q_prime, U1))
+    Theta = 2 * np.pi * U2
+    X = R * np.cos(Theta)
+    PX = R * np.sin(Theta)
+
+    beta = 1/(3-q)
+    
+    return X, PX, beta

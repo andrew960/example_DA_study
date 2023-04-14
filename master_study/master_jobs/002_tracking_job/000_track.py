@@ -64,12 +64,12 @@ normal_emitt_y = config['normal_emitt_y']
 
 input = config['xline_json']#'../001_machine_model/line_bb_for_tracking.json'
 
-#with open('/home/afornara/py/23_01_08/lhcmask2/python_examples/hl_lhc_collisions_python/xsuite_lines/line_bb_for_tracking.json', 'r') as fid:
 with open(input, 'r') as fid:
     loaded_dct = json.load(fid)
 line = xt.Line.from_dict(loaded_dct)
 
 print('Using line:'+input)
+print('Line ready')
 
 N=config['n_turns'] #Total number of turns
 sampling= 1 #Sampling rate, 1 sample every 'sampling' turns
@@ -107,20 +107,65 @@ p0_df = pd.DataFrame({
                     'zeta':ctx.nparray_from_context_array(p0_normal.zeta),
                     'delta':ctx.nparray_from_context_array(p0_normal.delta),
                     })
-
+print('dataframe ready')
 #Generating the particles
 
 
-distr = config['particle_file']
-df = pq.read_table(distr).to_pandas()
-x_in_sigmas = df['x_in_sigmas'].values
-px_in_sigmas = df['px_in_sigmas'].values
-y_in_sigmas = df['y_in_sigmas'].values
-py_in_sigmas = df['py_in_sigmas'].values
+# distr = config['particle_file']
+# df = pq.read_table(distr).to_pandas()
+# x_in_sigmas = df['x_in_sigmas'].values
+# px_in_sigmas = df['px_in_sigmas'].values
+# y_in_sigmas = df['y_in_sigmas'].values
+# py_in_sigmas = df['py_in_sigmas'].values
 
-N_particles = len(x_in_sigmas)
+N_particles = 20000
 
 bunch_intensity = config['bunch_intensity']
+# zeta, delta = xp.generate_longitudinal_coordinates(
+#     particle_ref=p0_normal,
+#     num_particles=N_particles, distribution='gaussian',
+#     sigma_z=7.5e-2, tracker=tracker_normal)
+
+# particles = xp.build_particles(
+#     tracker=tracker_normal,
+#     particle_ref=p0_normal,
+#     zeta=zeta, delta=delta,
+#     x_norm=x_in_sigmas, px_norm=px_in_sigmas,
+#     y_norm=y_in_sigmas, py_norm=py_in_sigmas,
+#     scale_with_transverse_norm_emitt=(normal_emitt_x, normal_emitt_y))
+
+# print('Generating N_particles =', N_particles)
+# particles = xp.generate_matched_gaussian_bunch(
+#                 num_particles=N_particles, total_intensity_particles=bunch_intensity,
+#                 nemitt_x=normal_emitt_x, nemitt_y=normal_emitt_y, sigma_z=sigma_z,
+#                 particle_ref=p0_normal,
+#                 tracker=tracker_normal)
+
+qx = 1.1
+q_prime_x = (1+qx)/(3-qx)
+U1x = np.random.uniform(size = N_particles)
+U2x = np.random.uniform(size = N_particles)
+basex = q_prime_x
+
+Rx = np.sqrt(-2 * log_q(q_prime_x, U1x))
+Thetax = 2 * np.pi * U2x
+x_in_sigmas = Rx * np.cos(Thetax)
+px_in_sigmas= Rx * np.sin(Thetax)
+
+qy = 1.1
+q_prime_y = (1+qy)/(3-qy)
+U1y = np.random.uniform(size = N_particles)
+U2y = np.random.uniform(size = N_particles)
+basey = q_prime_y
+
+Ry = Rx#np.sqrt(-2 * log_q(q_prime_y, U1y))
+Thetay = 2 * np.pi * U2y
+y_in_sigmas = Rx * np.cos(Thetay)
+py_in_sigmas = Rx * np.sin(Thetay)
+
+
+
+
 zeta, delta = xp.generate_longitudinal_coordinates(
     particle_ref=p0_normal,
     num_particles=N_particles, distribution='gaussian',
@@ -134,6 +179,7 @@ particles = xp.build_particles(
     y_norm=y_in_sigmas, py_norm=py_in_sigmas,
     scale_with_transverse_norm_emitt=(normal_emitt_x, normal_emitt_y))
 
+print('Generation complete')
 xs_i = []
 pxs_i = []
 ys_i = []
@@ -168,7 +214,7 @@ for elem in line.element_dict :
         mu_ps[jj]=line.element_dict[elem].ps
         jj+=1
 
-
+print('Loading noise files')
 with open(config['noise_file'], 'rb') as f:
     ph_noise = np.load(f)
     a_noise =np.load(f)
@@ -183,7 +229,7 @@ print("Begin tracking N_particles = ", N_particles)
 print("Total turns =", N)
 print('------------------------------------')
 for ii in range(N):
-    if(ii<=1024):
+    if(ii<=100):
         xs_i.append(ctx.nparray_from_context_array(particles.x))
         pxs_i.append(ctx.nparray_from_context_array(particles.px)) 
         ys_i.append(ctx.nparray_from_context_array(particles.y))
@@ -191,7 +237,7 @@ for ii in range(N):
         zetas_i.append(ctx.nparray_from_context_array(particles.zeta))
         deltas_i.append(ctx.nparray_from_context_array(particles.delta))
         states_i.append(ctx.nparray_from_context_array(particles.state))
-    if(ii>=N-1024):
+    if(ii>=N-100):
         xs_f.append(ctx.nparray_from_context_array(particles.x))
         pxs_f.append(ctx.nparray_from_context_array(particles.px)) 
         ys_f.append(ctx.nparray_from_context_array(particles.y))

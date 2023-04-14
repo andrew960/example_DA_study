@@ -28,7 +28,7 @@ children={}
 for idx in range(10):
     track_children={}
     children[f'{idx:03}_simulation'] = {
-                                    'npart':int(20000),
+                                    'npart':int(100000),
                                     'children':track_children}
     track_children['000_track'] ={
         'xline_json': '../../line_bb_for_tracking.json',
