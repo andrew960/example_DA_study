@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/afs/cern.ch/work/a/afornara/public/xmask/example_DA_study/noise_master_study/scans/example_HL_tunescan/base_collider/1_build_distr_and_collider.py", line 101, in <module>
-    os.remove("mad_collider.log")
-FileNotFoundError: [Errno 2] No such file or directory: 'mad_collider.log'
