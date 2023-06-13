@@ -1,0 +1,63 @@
+config_particles:
+  r_min: 2.0
+  r_max: 10.0
+  n_r: 5
+  n_angles: 5
+  n_split: 1
+
+config_collider:
+  config_mad:
+    # Links to be made for tools and scripts
+    links:
+      acc-models-lhc: /afs/cern.ch/eng/lhc/optics/HLLHCV1.5
+
+    # Optics file
+    optics_file: acc-models-lhc/flatcc/opt_flathv_75_180_1500_thin.madx # round/opt_round_150_1500_thin.madx #
+
+    # Beam parameters
+    beam_config:
+      lhcb1:
+        beam_energy_tot: 7000 # [GeV]
+      lhcb2:
+        beam_energy_tot: 7000 # [GeV]
+
+    # Enable machine imperfections
+    enable_imperfections: false
+
+    # Enable knob synthesis (for coupling correction, if no imperfections)
+    enable_knob_synthesis: true
+
+    # Rename the coupling knobs to avoid conflict between b1 and b2
+    # (for hllhc using old fortran code to generate the knobs)
+    rename_coupling_knobs: true
+
+    # Optics version, for choice of correction algorithms
+    # (ver_lhc_run or ver_hllhc_optics)
+    ver_hllhc_optics: 1.5
+    ver_lhc_run:
+
+    # Parameters for machine imperfections
+    pars_for_imperfections:
+      par_myseed: 1
+      par_correct_for_D2: 0
+      par_correct_for_MCBX: 0
+      par_on_errors_LHC: 1
+      par_off_errors_Q4_inIP15: 0
+      par_off_errors_Q5_inIP15: 0
+      par_on_errors_MBH: 1
+      par_on_errors_Q4: 1
+      par_on_errors_D2: 1
+      par_on_errors_D1: 1
+      par_on_errors_IT: 1
+      par_on_errors_MCBRD: 0
+      par_on_errors_MCBXF: 0
+      par_on_errors_NLC: 0
+      par_write_errortable: 1
+
+  beam_config:
+    lhcb1:
+      beam_energy_tot: 7000
+    lhcb2:
+      beam_energy_tot: 7000
+  optics_file: acc-models-lhc/flatcc/opt_flathv_75_180_1500_thin.madx
+log_file: tree_maker.log

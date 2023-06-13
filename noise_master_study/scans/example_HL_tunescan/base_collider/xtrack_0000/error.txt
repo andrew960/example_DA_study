@@ -1,0 +1,28 @@
+e4f561aa6a1243089a7c5cbabd3a4eeb.c:4396: warning: "_GNU_SOURCE" redefined
+ #  define _GNU_SOURCE // enable GNU libc NAN extension if possible
+ 
+In file included from e4f561aa6a1243089a7c5cbabd3a4eeb.c:50:
+/afs/cern.ch/work/a/afornara/public/xmask/example_DA_study/miniconda/include/python3.10/pyconfig.h:1621: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ 
+e2ef38e5eea5461e93910fc8af448989.c:4396: warning: "_GNU_SOURCE" redefined
+ #  define _GNU_SOURCE // enable GNU libc NAN extension if possible
+ 
+In file included from e2ef38e5eea5461e93910fc8af448989.c:50:
+/afs/cern.ch/work/a/afornara/public/xmask/example_DA_study/miniconda/include/python3.10/pyconfig.h:1621: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ 
+8f0544bafc8e421db8ab4a50cdee9350.c:3698: warning: "_GNU_SOURCE" redefined
+ #  define _GNU_SOURCE // enable GNU libc NAN extension if possible
+ 
+In file included from 8f0544bafc8e421db8ab4a50cdee9350.c:50:
+/afs/cern.ch/work/a/afornara/public/xmask/example_DA_study/miniconda/include/python3.10/pyconfig.h:1621: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ 
+b21bfc5f78cd4d44bd7cfc572c37d952.c:5694: warning: "_GNU_SOURCE" redefined
+ #  define _GNU_SOURCE // enable GNU libc NAN extension if possible
+ 
+In file included from b21bfc5f78cd4d44bd7cfc572c37d952.c:50:
+/afs/cern.ch/work/a/afornara/public/xmask/example_DA_study/miniconda/include/python3.10/pyconfig.h:1621: note: this is the location of the previous definition
+ #define _GNU_SOURCE 1
+ 

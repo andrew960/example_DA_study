@@ -1,0 +1,305 @@
+Loading line from dict:  0%  Loading line from dict:  0%  Loading line from dict:  1%  Loading line from dict:  1%  Loading line from dict:  2%  Loading line from dict:  2%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  4%  Loading line from dict:  4%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  6%  Loading line from dict:  6%  Loading line from dict:  7%  Loading line from dict:  7%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  9%  Loading line from dict:  9%  Loading line from dict: 10%  Loading line from dict: 10%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 12%  Loading line from dict: 12%  Loading line from dict: 13%  Loading line from dict: 13%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 15%  Loading line from dict: 15%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 17%  Loading line from dict: 17%  Loading line from dict: 18%  Loading line from dict: 18%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 20%  Loading line from dict: 20%  Loading line from dict: 21%  Loading line from dict: 21%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 23%  Loading line from dict: 23%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 25%  Loading line from dict: 25%  Loading line from dict: 26%  Loading line from dict: 26%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 28%  Loading line from dict: 28%  Loading line from dict: 29%  Loading line from dict: 29%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 31%  Loading line from dict: 31%  Loading line from dict: 32%  Loading line from dict: 32%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 34%  Loading line from dict: 34%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 36%  Loading line from dict: 36%  Loading line from dict: 37%  Loading line from dict: 37%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 39%  Loading line from dict: 39%  Loading line from dict: 40%  Loading line from dict: 40%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 42%  Loading line from dict: 42%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 44%  Loading line from dict: 44%  Loading line from dict: 45%  Loading line from dict: 45%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 47%  Loading line from dict: 47%  Loading line from dict: 48%  Loading line from dict: 48%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 50%  Loading line from dict: 50%  Loading line from dict: 51%  Loading line from dict: 51%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 53%  Loading line from dict: 53%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 55%  Loading line from dict: 55%  Loading line from dict: 56%  Loading line from dict: 56%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 58%  Loading line from dict: 58%  Loading line from dict: 59%  Loading line from dict: 59%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 61%  Loading line from dict: 61%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 63%  Loading line from dict: 63%  Loading line from dict: 64%  Loading line from dict: 64%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 66%  Loading line from dict: 66%  Loading line from dict: 67%  Loading line from dict: 67%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 69%  Loading line from dict: 69%  Loading line from dict: 70%  Loading line from dict: 70%  Loading line from dict: 71%  Loading line from dict: 71%  Loading line from dict: 71%  Loading line from dict: 72%  Loading line from dict: 72%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 74%  Loading line from dict: 74%  Loading line from dict: 75%  Loading line from dict: 75%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 77%  Loading line from dict: 77%  Loading line from dict: 78%  Loading line from dict: 78%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 80%  Loading line from dict: 80%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 82%  Loading line from dict: 82%  Loading line from dict: 83%  Loading line from dict: 83%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 85%  Loading line from dict: 85%  Loading line from dict: 86%  Loading line from dict: 86%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 88%  Loading line from dict: 88%  Loading line from dict: 89%  Loading line from dict: 89%  Loading line from dict: 90%  Loading line from dict: 90%  Loading line from dict: 90%  Loading line from dict: 91%  Loading line from dict: 91%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 93%  Loading line from dict: 93%  Loading line from dict: 94%  Loading line from dict: 94%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 96%  Loading line from dict: 96%  Loading line from dict: 97%  Loading line from dict: 97%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 99%  Loading line from dict: 99%  Loading line from dict: 100%  Done loading line from dict.           
+Loading line from dict:  0%  Loading line from dict:  0%  Loading line from dict:  1%  Loading line from dict:  1%  Loading line from dict:  2%  Loading line from dict:  2%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  4%  Loading line from dict:  4%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  6%  Loading line from dict:  6%  Loading line from dict:  7%  Loading line from dict:  7%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  9%  Loading line from dict:  9%  Loading line from dict: 10%  Loading line from dict: 10%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 12%  Loading line from dict: 12%  Loading line from dict: 13%  Loading line from dict: 13%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 15%  Loading line from dict: 15%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 17%  Loading line from dict: 17%  Loading line from dict: 18%  Loading line from dict: 18%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 20%  Loading line from dict: 20%  Loading line from dict: 21%  Loading line from dict: 21%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 23%  Loading line from dict: 23%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 25%  Loading line from dict: 25%  Loading line from dict: 26%  Loading line from dict: 26%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 28%  Loading line from dict: 28%  Loading line from dict: 29%  Loading line from dict: 29%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 31%  Loading line from dict: 31%  Loading line from dict: 32%  Loading line from dict: 32%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 34%  Loading line from dict: 34%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 36%  Loading line from dict: 36%  Loading line from dict: 37%  Loading line from dict: 37%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 39%  Loading line from dict: 39%  Loading line from dict: 40%  Loading line from dict: 40%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 42%  Loading line from dict: 42%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 44%  Loading line from dict: 44%  Loading line from dict: 45%  Loading line from dict: 45%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 47%  Loading line from dict: 47%  Loading line from dict: 48%  Loading line from dict: 48%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 50%  Loading line from dict: 50%  Loading line from dict: 51%  Loading line from dict: 51%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 53%  Loading line from dict: 53%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 55%  Loading line from dict: 55%  Loading line from dict: 56%  Loading line from dict: 56%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 58%  Loading line from dict: 58%  Loading line from dict: 59%  Loading line from dict: 59%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 61%  Loading line from dict: 61%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 63%  Loading line from dict: 63%  Loading line from dict: 64%  Loading line from dict: 64%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 66%  Loading line from dict: 66%  Loading line from dict: 67%  Loading line from dict: 67%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 69%  Loading line from dict: 69%  Loading line from dict: 70%  Loading line from dict: 70%  Loading line from dict: 70%  Loading line from dict: 71%  Loading line from dict: 71%  Loading line from dict: 72%  Loading line from dict: 72%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 74%  Loading line from dict: 74%  Loading line from dict: 75%  Loading line from dict: 75%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 77%  Loading line from dict: 77%  Loading line from dict: 78%  Loading line from dict: 78%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 80%  Loading line from dict: 80%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 82%  Loading line from dict: 82%  Loading line from dict: 83%  Loading line from dict: 83%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 85%  Loading line from dict: 85%  Loading line from dict: 86%  Loading line from dict: 86%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 88%  Loading line from dict: 88%  Loading line from dict: 89%  Loading line from dict: 89%  Loading line from dict: 89%  Loading line from dict: 90%  Loading line from dict: 90%  Loading line from dict: 91%  Loading line from dict: 91%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 93%  Loading line from dict: 93%  Loading line from dict: 94%  Loading line from dict: 94%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 96%  Loading line from dict: 96%  Loading line from dict: 97%  Loading line from dict: 97%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 99%  Loading line from dict: 99%  Loading line from dict: 100%  Done loading line from dict.           
+Loading line from dict:  0%  Loading line from dict:  0%  Loading line from dict:  1%  Loading line from dict:  1%  Loading line from dict:  2%  Loading line from dict:  2%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  4%  Loading line from dict:  4%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  6%  Loading line from dict:  6%  Loading line from dict:  7%  Loading line from dict:  7%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  9%  Loading line from dict:  9%  Loading line from dict: 10%  Loading line from dict: 10%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 12%  Loading line from dict: 12%  Loading line from dict: 13%  Loading line from dict: 13%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 15%  Loading line from dict: 15%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 17%  Loading line from dict: 17%  Loading line from dict: 18%  Loading line from dict: 18%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 20%  Loading line from dict: 20%  Loading line from dict: 21%  Loading line from dict: 21%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 23%  Loading line from dict: 23%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 25%  Loading line from dict: 25%  Loading line from dict: 26%  Loading line from dict: 26%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 28%  Loading line from dict: 28%  Loading line from dict: 29%  Loading line from dict: 29%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 31%  Loading line from dict: 31%  Loading line from dict: 32%  Loading line from dict: 32%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 34%  Loading line from dict: 34%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 36%  Loading line from dict: 36%  Loading line from dict: 37%  Loading line from dict: 37%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 39%  Loading line from dict: 39%  Loading line from dict: 40%  Loading line from dict: 40%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 42%  Loading line from dict: 42%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 44%  Loading line from dict: 44%  Loading line from dict: 45%  Loading line from dict: 45%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 47%  Loading line from dict: 47%  Loading line from dict: 48%  Loading line from dict: 48%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 50%  Loading line from dict: 50%  Loading line from dict: 51%  Loading line from dict: 51%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 53%  Loading line from dict: 53%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 55%  Loading line from dict: 55%  Loading line from dict: 56%  Loading line from dict: 56%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 58%  Loading line from dict: 58%  Loading line from dict: 59%  Loading line from dict: 59%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 61%  Loading line from dict: 61%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 63%  Loading line from dict: 63%  Loading line from dict: 64%  Loading line from dict: 64%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 66%  Loading line from dict: 66%  Loading line from dict: 67%  Loading line from dict: 67%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 69%  Loading line from dict: 69%  Loading line from dict: 70%  Loading line from dict: 70%  Loading line from dict: 71%  Loading line from dict: 71%  Loading line from dict: 71%  Loading line from dict: 72%  Loading line from dict: 72%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 74%  Loading line from dict: 74%  Loading line from dict: 75%  Loading line from dict: 75%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 77%  Loading line from dict: 77%  Loading line from dict: 78%  Loading line from dict: 78%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 80%  Loading line from dict: 80%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 82%  Loading line from dict: 82%  Loading line from dict: 83%  Loading line from dict: 83%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 85%  Loading line from dict: 85%  Loading line from dict: 86%  Loading line from dict: 86%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 88%  Loading line from dict: 88%  Loading line from dict: 89%  Loading line from dict: 89%  Loading line from dict: 90%  Loading line from dict: 90%  Loading line from dict: 90%  Loading line from dict: 91%  Loading line from dict: 91%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 93%  Loading line from dict: 93%  Loading line from dict: 94%  Loading line from dict: 94%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 96%  Loading line from dict: 96%  Loading line from dict: 97%  Loading line from dict: 97%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 99%  Loading line from dict: 99%  Loading line from dict: 100%  Done loading line from dict.           
+Loading line from dict:  0%  Loading line from dict:  0%  Loading line from dict:  1%  Loading line from dict:  1%  Loading line from dict:  2%  Loading line from dict:  2%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  3%  Loading line from dict:  4%  Loading line from dict:  4%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  5%  Loading line from dict:  6%  Loading line from dict:  6%  Loading line from dict:  7%  Loading line from dict:  7%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  8%  Loading line from dict:  9%  Loading line from dict:  9%  Loading line from dict: 10%  Loading line from dict: 10%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 11%  Loading line from dict: 12%  Loading line from dict: 12%  Loading line from dict: 13%  Loading line from dict: 13%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 14%  Loading line from dict: 15%  Loading line from dict: 15%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 16%  Loading line from dict: 17%  Loading line from dict: 17%  Loading line from dict: 18%  Loading line from dict: 18%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 19%  Loading line from dict: 20%  Loading line from dict: 20%  Loading line from dict: 21%  Loading line from dict: 21%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 22%  Loading line from dict: 23%  Loading line from dict: 23%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 24%  Loading line from dict: 25%  Loading line from dict: 25%  Loading line from dict: 26%  Loading line from dict: 26%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 27%  Loading line from dict: 28%  Loading line from dict: 28%  Loading line from dict: 29%  Loading line from dict: 29%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 30%  Loading line from dict: 31%  Loading line from dict: 31%  Loading line from dict: 32%  Loading line from dict: 32%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 33%  Loading line from dict: 34%  Loading line from dict: 34%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 35%  Loading line from dict: 36%  Loading line from dict: 36%  Loading line from dict: 37%  Loading line from dict: 37%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 38%  Loading line from dict: 39%  Loading line from dict: 39%  Loading line from dict: 40%  Loading line from dict: 40%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 41%  Loading line from dict: 42%  Loading line from dict: 42%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 43%  Loading line from dict: 44%  Loading line from dict: 44%  Loading line from dict: 45%  Loading line from dict: 45%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 46%  Loading line from dict: 47%  Loading line from dict: 47%  Loading line from dict: 48%  Loading line from dict: 48%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 49%  Loading line from dict: 50%  Loading line from dict: 50%  Loading line from dict: 51%  Loading line from dict: 51%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 52%  Loading line from dict: 53%  Loading line from dict: 53%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 54%  Loading line from dict: 55%  Loading line from dict: 55%  Loading line from dict: 56%  Loading line from dict: 56%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 57%  Loading line from dict: 58%  Loading line from dict: 58%  Loading line from dict: 59%  Loading line from dict: 59%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 60%  Loading line from dict: 61%  Loading line from dict: 61%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 62%  Loading line from dict: 63%  Loading line from dict: 63%  Loading line from dict: 64%  Loading line from dict: 64%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 65%  Loading line from dict: 66%  Loading line from dict: 66%  Loading line from dict: 67%  Loading line from dict: 67%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 68%  Loading line from dict: 69%  Loading line from dict: 69%  Loading line from dict: 70%  Loading line from dict: 70%  Loading line from dict: 70%  Loading line from dict: 71%  Loading line from dict: 71%  Loading line from dict: 72%  Loading line from dict: 72%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 73%  Loading line from dict: 74%  Loading line from dict: 74%  Loading line from dict: 75%  Loading line from dict: 75%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 76%  Loading line from dict: 77%  Loading line from dict: 77%  Loading line from dict: 78%  Loading line from dict: 78%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 79%  Loading line from dict: 80%  Loading line from dict: 80%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 81%  Loading line from dict: 82%  Loading line from dict: 82%  Loading line from dict: 83%  Loading line from dict: 83%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 84%  Loading line from dict: 85%  Loading line from dict: 85%  Loading line from dict: 86%  Loading line from dict: 86%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 87%  Loading line from dict: 88%  Loading line from dict: 88%  Loading line from dict: 89%  Loading line from dict: 89%  Loading line from dict: 89%  Loading line from dict: 90%  Loading line from dict: 90%  Loading line from dict: 91%  Loading line from dict: 91%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 92%  Loading line from dict: 93%  Loading line from dict: 93%  Loading line from dict: 94%  Loading line from dict: 94%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 95%  Loading line from dict: 96%  Loading line from dict: 96%  Loading line from dict: 97%  Loading line from dict: 97%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 98%  Loading line from dict: 99%  Loading line from dict: 99%  Loading line from dict: 100%  Done loading line from dict.           
+Insert: bb_ho.c1b1_00     Insert: bb_ho.c2b1_00     Insert: bb_ho.c5b1_00     Insert: bb_ho.c8b1_00     Insert: bb_ho.l1b1_01     Insert: bb_ho.l1b1_02     Insert: bb_ho.l1b1_03     Insert: bb_ho.l1b1_04     Insert: bb_ho.l1b1_05     Insert: bb_ho.l2b1_01     Insert: bb_ho.l2b1_02     Insert: bb_ho.l2b1_03     Insert: bb_ho.l2b1_04     Insert: bb_ho.l2b1_05     Insert: bb_ho.l5b1_01     Insert: bb_ho.l5b1_02     Insert: bb_ho.l5b1_03     Insert: bb_ho.l5b1_04     Insert: bb_ho.l5b1_05     Insert: bb_ho.l8b1_01     Insert: bb_ho.l8b1_02     Insert: bb_ho.l8b1_03     Insert: bb_ho.l8b1_04     Insert: bb_ho.l8b1_05     Insert: bb_ho.r1b1_01     Insert: bb_ho.r1b1_02     Insert: bb_ho.r1b1_03     Insert: bb_ho.r1b1_04     Insert: bb_ho.r1b1_05     Insert: bb_ho.r2b1_01     Insert: bb_ho.r2b1_02     Insert: bb_ho.r2b1_03     Insert: bb_ho.r2b1_04     Insert: bb_ho.r2b1_05     Insert: bb_ho.r5b1_01     Insert: bb_ho.r5b1_02     Insert: bb_ho.r5b1_03     Insert: bb_ho.r5b1_04     Insert: bb_ho.r5b1_05     Insert: bb_ho.r8b1_01     Insert: bb_ho.r8b1_02     Insert: bb_ho.r8b1_03     Insert: bb_ho.r8b1_04     Insert: bb_ho.r8b1_05     Insert: bb_lr.l1b1_01     Insert: bb_lr.l1b1_02     Insert: bb_lr.l1b1_03     Insert: bb_lr.l1b1_04     Insert: bb_lr.l1b1_05     Insert: bb_lr.l1b1_06     Insert: bb_lr.l1b1_07     Insert: bb_lr.l1b1_08     Insert: bb_lr.l1b1_09     Insert: bb_lr.l1b1_10     Insert: bb_lr.l1b1_11     Insert: bb_lr.l1b1_12     Insert: bb_lr.l1b1_13     Insert: bb_lr.l1b1_14     Insert: bb_lr.l1b1_15     Insert: bb_lr.l1b1_16     Insert: bb_lr.l1b1_17     Insert: bb_lr.l1b1_18     Insert: bb_lr.l1b1_19     Insert: bb_lr.l1b1_20     Insert: bb_lr.l1b1_21     Insert: bb_lr.l1b1_22     Insert: bb_lr.l1b1_23     Insert: bb_lr.l1b1_24     Insert: bb_lr.l1b1_25     Insert: bb_lr.l2b1_01     Insert: bb_lr.l2b1_02     Insert: bb_lr.l2b1_03     Insert: bb_lr.l2b1_04     Insert: bb_lr.l2b1_05     Insert: bb_lr.l2b1_06     Insert: bb_lr.l2b1_07     Insert: bb_lr.l2b1_08     Insert: bb_lr.l2b1_09     Insert: bb_lr.l2b1_10     Insert: bb_lr.l2b1_11     Insert: bb_lr.l2b1_12     Insert: bb_lr.l2b1_13     Insert: bb_lr.l2b1_14     Insert: bb_lr.l2b1_15     Insert: bb_lr.l2b1_16     Insert: bb_lr.l2b1_17     Insert: bb_lr.l2b1_18     Insert: bb_lr.l2b1_19     Insert: bb_lr.l2b1_20     Insert: bb_lr.l5b1_01     Insert: bb_lr.l5b1_02     Insert: bb_lr.l5b1_03     Insert: bb_lr.l5b1_04     Insert: bb_lr.l5b1_05     Insert: bb_lr.l5b1_06     Insert: bb_lr.l5b1_07     Insert: bb_lr.l5b1_08     Insert: bb_lr.l5b1_09     Insert: bb_lr.l5b1_10     Insert: bb_lr.l5b1_11     Insert: bb_lr.l5b1_12     Insert: bb_lr.l5b1_13     Insert: bb_lr.l5b1_14     Insert: bb_lr.l5b1_15     Insert: bb_lr.l5b1_16     Insert: bb_lr.l5b1_17     Insert: bb_lr.l5b1_18     Insert: bb_lr.l5b1_19     Insert: bb_lr.l5b1_20     Insert: bb_lr.l5b1_21     Insert: bb_lr.l5b1_22     Insert: bb_lr.l5b1_23     Insert: bb_lr.l5b1_24     Insert: bb_lr.l5b1_25     Insert: bb_lr.l8b1_01     Insert: bb_lr.l8b1_02     Insert: bb_lr.l8b1_03     Insert: bb_lr.l8b1_04     Insert: bb_lr.l8b1_05     Insert: bb_lr.l8b1_06     Insert: bb_lr.l8b1_07     Insert: bb_lr.l8b1_08     Insert: bb_lr.l8b1_09     Insert: bb_lr.l8b1_10     Insert: bb_lr.l8b1_11     Insert: bb_lr.l8b1_12     Insert: bb_lr.l8b1_13     Insert: bb_lr.l8b1_14     Insert: bb_lr.l8b1_15     Insert: bb_lr.l8b1_16     Insert: bb_lr.l8b1_17     Insert: bb_lr.l8b1_18     Insert: bb_lr.l8b1_19     Insert: bb_lr.l8b1_20     Insert: bb_lr.r1b1_01     Insert: bb_lr.r1b1_02     Insert: bb_lr.r1b1_03     Insert: bb_lr.r1b1_04     Insert: bb_lr.r1b1_05     Insert: bb_lr.r1b1_06     Insert: bb_lr.r1b1_07     Insert: bb_lr.r1b1_08     Insert: bb_lr.r1b1_09     Insert: bb_lr.r1b1_10     Insert: bb_lr.r1b1_11     Insert: bb_lr.r1b1_12     Insert: bb_lr.r1b1_13     Insert: bb_lr.r1b1_14     Insert: bb_lr.r1b1_15     Insert: bb_lr.r1b1_16     Insert: bb_lr.r1b1_17     Insert: bb_lr.r1b1_18     Insert: bb_lr.r1b1_19     Insert: bb_lr.r1b1_20     Insert: bb_lr.r1b1_21     Insert: bb_lr.r1b1_22     Insert: bb_lr.r1b1_23     Insert: bb_lr.r1b1_24     Insert: bb_lr.r1b1_25     Insert: bb_lr.r2b1_01     Insert: bb_lr.r2b1_02     Insert: bb_lr.r2b1_03     Insert: bb_lr.r2b1_04     Insert: bb_lr.r2b1_05     Insert: bb_lr.r2b1_06     Insert: bb_lr.r2b1_07     Insert: bb_lr.r2b1_08     Insert: bb_lr.r2b1_09     Insert: bb_lr.r2b1_10     Insert: bb_lr.r2b1_11     Insert: bb_lr.r2b1_12     Insert: bb_lr.r2b1_13     Insert: bb_lr.r2b1_14     Insert: bb_lr.r2b1_15     Insert: bb_lr.r2b1_16     Insert: bb_lr.r2b1_17     Insert: bb_lr.r2b1_18     Insert: bb_lr.r2b1_19     Insert: bb_lr.r2b1_20     Insert: bb_lr.r5b1_01     Insert: bb_lr.r5b1_02     Insert: bb_lr.r5b1_03     Insert: bb_lr.r5b1_04     Insert: bb_lr.r5b1_05     Insert: bb_lr.r5b1_06     Insert: bb_lr.r5b1_07     Insert: bb_lr.r5b1_08     Insert: bb_lr.r5b1_09     Insert: bb_lr.r5b1_10     Insert: bb_lr.r5b1_11     Insert: bb_lr.r5b1_12     Insert: bb_lr.r5b1_13     Insert: bb_lr.r5b1_14     Insert: bb_lr.r5b1_15     Insert: bb_lr.r5b1_16     Insert: bb_lr.r5b1_17     Insert: bb_lr.r5b1_18     Insert: bb_lr.r5b1_19     Insert: bb_lr.r5b1_20     Insert: bb_lr.r5b1_21     Insert: bb_lr.r5b1_22     Insert: bb_lr.r5b1_23     Insert: bb_lr.r5b1_24     Insert: bb_lr.r5b1_25     Insert: bb_lr.r8b1_01     Insert: bb_lr.r8b1_02     Insert: bb_lr.r8b1_03     Insert: bb_lr.r8b1_04     Insert: bb_lr.r8b1_05     Insert: bb_lr.r8b1_06     Insert: bb_lr.r8b1_07     Insert: bb_lr.r8b1_08     Insert: bb_lr.r8b1_09     Insert: bb_lr.r8b1_10     Insert: bb_lr.r8b1_11     Insert: bb_lr.r8b1_12     Insert: bb_lr.r8b1_13     Insert: bb_lr.r8b1_14     Insert: bb_lr.r8b1_15     Insert: bb_lr.r8b1_16     Insert: bb_lr.r8b1_17     Insert: bb_lr.r8b1_18     Insert: bb_lr.r8b1_19     Insert: bb_lr.r8b1_20     Insert: bb_ho.c1b2_00     Insert: bb_ho.c2b2_00     Insert: bb_ho.c5b2_00     Insert: bb_ho.c8b2_00     Insert: bb_ho.l1b2_01     Insert: bb_ho.l1b2_02     Insert: bb_ho.l1b2_03     Insert: bb_ho.l1b2_04     Insert: bb_ho.l1b2_05     Insert: bb_ho.l2b2_01     Insert: bb_ho.l2b2_02     Insert: bb_ho.l2b2_03     Insert: bb_ho.l2b2_04     Insert: bb_ho.l2b2_05     Insert: bb_ho.l5b2_01     Insert: bb_ho.l5b2_02     Insert: bb_ho.l5b2_03     Insert: bb_ho.l5b2_04     Insert: bb_ho.l5b2_05     Insert: bb_ho.l8b2_01     Insert: bb_ho.l8b2_02     Insert: bb_ho.l8b2_03     Insert: bb_ho.l8b2_04     Insert: bb_ho.l8b2_05     Insert: bb_ho.r1b2_01     Insert: bb_ho.r1b2_02     Insert: bb_ho.r1b2_03     Insert: bb_ho.r1b2_04     Insert: bb_ho.r1b2_05     Insert: bb_ho.r2b2_01     Insert: bb_ho.r2b2_02     Insert: bb_ho.r2b2_03     Insert: bb_ho.r2b2_04     Insert: bb_ho.r2b2_05     Insert: bb_ho.r5b2_01     Insert: bb_ho.r5b2_02     Insert: bb_ho.r5b2_03     Insert: bb_ho.r5b2_04     Insert: bb_ho.r5b2_05     Insert: bb_ho.r8b2_01     Insert: bb_ho.r8b2_02     Insert: bb_ho.r8b2_03     Insert: bb_ho.r8b2_04     Insert: bb_ho.r8b2_05     Insert: bb_lr.l1b2_01     Insert: bb_lr.l1b2_02     Insert: bb_lr.l1b2_03     Insert: bb_lr.l1b2_04     Insert: bb_lr.l1b2_05     Insert: bb_lr.l1b2_06     Insert: bb_lr.l1b2_07     Insert: bb_lr.l1b2_08     Insert: bb_lr.l1b2_09     Insert: bb_lr.l1b2_10     Insert: bb_lr.l1b2_11     Insert: bb_lr.l1b2_12     Insert: bb_lr.l1b2_13     Insert: bb_lr.l1b2_14     Insert: bb_lr.l1b2_15     Insert: bb_lr.l1b2_16     Insert: bb_lr.l1b2_17     Insert: bb_lr.l1b2_18     Insert: bb_lr.l1b2_19     Insert: bb_lr.l1b2_20     Insert: bb_lr.l1b2_21     Insert: bb_lr.l1b2_22     Insert: bb_lr.l1b2_23     Insert: bb_lr.l1b2_24     Insert: bb_lr.l1b2_25     Insert: bb_lr.l2b2_01     Insert: bb_lr.l2b2_02     Insert: bb_lr.l2b2_03     Insert: bb_lr.l2b2_04     Insert: bb_lr.l2b2_05     Insert: bb_lr.l2b2_06     Insert: bb_lr.l2b2_07     Insert: bb_lr.l2b2_08     Insert: bb_lr.l2b2_09     Insert: bb_lr.l2b2_10     Insert: bb_lr.l2b2_11     Insert: bb_lr.l2b2_12     Insert: bb_lr.l2b2_13     Insert: bb_lr.l2b2_14     Insert: bb_lr.l2b2_15     Insert: bb_lr.l2b2_16     Insert: bb_lr.l2b2_17     Insert: bb_lr.l2b2_18     Insert: bb_lr.l2b2_19     Insert: bb_lr.l2b2_20     Insert: bb_lr.l5b2_01     Insert: bb_lr.l5b2_02     Insert: bb_lr.l5b2_03     Insert: bb_lr.l5b2_04     Insert: bb_lr.l5b2_05     Insert: bb_lr.l5b2_06     Insert: bb_lr.l5b2_07     Insert: bb_lr.l5b2_08     Insert: bb_lr.l5b2_09     Insert: bb_lr.l5b2_10     Insert: bb_lr.l5b2_11     Insert: bb_lr.l5b2_12     Insert: bb_lr.l5b2_13     Insert: bb_lr.l5b2_14     Insert: bb_lr.l5b2_15     Insert: bb_lr.l5b2_16     Insert: bb_lr.l5b2_17     Insert: bb_lr.l5b2_18     Insert: bb_lr.l5b2_19     Insert: bb_lr.l5b2_20     Insert: bb_lr.l5b2_21     Insert: bb_lr.l5b2_22     Insert: bb_lr.l5b2_23     Insert: bb_lr.l5b2_24     Insert: bb_lr.l5b2_25     Insert: bb_lr.l8b2_01     Insert: bb_lr.l8b2_02     Insert: bb_lr.l8b2_03     Insert: bb_lr.l8b2_04     Insert: bb_lr.l8b2_05     Insert: bb_lr.l8b2_06     Insert: bb_lr.l8b2_07     Insert: bb_lr.l8b2_08     Insert: bb_lr.l8b2_09     Insert: bb_lr.l8b2_10     Insert: bb_lr.l8b2_11     Insert: bb_lr.l8b2_12     Insert: bb_lr.l8b2_13     Insert: bb_lr.l8b2_14     Insert: bb_lr.l8b2_15     Insert: bb_lr.l8b2_16     Insert: bb_lr.l8b2_17     Insert: bb_lr.l8b2_18     Insert: bb_lr.l8b2_19     Insert: bb_lr.l8b2_20     Insert: bb_lr.r1b2_01     Insert: bb_lr.r1b2_02     Insert: bb_lr.r1b2_03     Insert: bb_lr.r1b2_04     Insert: bb_lr.r1b2_05     Insert: bb_lr.r1b2_06     Insert: bb_lr.r1b2_07     Insert: bb_lr.r1b2_08     Insert: bb_lr.r1b2_09     Insert: bb_lr.r1b2_10     Insert: bb_lr.r1b2_11     Insert: bb_lr.r1b2_12     Insert: bb_lr.r1b2_13     Insert: bb_lr.r1b2_14     Insert: bb_lr.r1b2_15     Insert: bb_lr.r1b2_16     Insert: bb_lr.r1b2_17     Insert: bb_lr.r1b2_18     Insert: bb_lr.r1b2_19     Insert: bb_lr.r1b2_20     Insert: bb_lr.r1b2_21     Insert: bb_lr.r1b2_22     Insert: bb_lr.r1b2_23     Insert: bb_lr.r1b2_24     Insert: bb_lr.r1b2_25     Insert: bb_lr.r2b2_01     Insert: bb_lr.r2b2_02     Insert: bb_lr.r2b2_03     Insert: bb_lr.r2b2_04     Insert: bb_lr.r2b2_05     Insert: bb_lr.r2b2_06     Insert: bb_lr.r2b2_07     Insert: bb_lr.r2b2_08     Insert: bb_lr.r2b2_09     Insert: bb_lr.r2b2_10     Insert: bb_lr.r2b2_11     Insert: bb_lr.r2b2_12     Insert: bb_lr.r2b2_13     Insert: bb_lr.r2b2_14     Insert: bb_lr.r2b2_15     Insert: bb_lr.r2b2_16     Insert: bb_lr.r2b2_17     Insert: bb_lr.r2b2_18     Insert: bb_lr.r2b2_19     Insert: bb_lr.r2b2_20     Insert: bb_lr.r5b2_01     Insert: bb_lr.r5b2_02     Insert: bb_lr.r5b2_03     Insert: bb_lr.r5b2_04     Insert: bb_lr.r5b2_05     Insert: bb_lr.r5b2_06     Insert: bb_lr.r5b2_07     Insert: bb_lr.r5b2_08     Insert: bb_lr.r5b2_09     Insert: bb_lr.r5b2_10     Insert: bb_lr.r5b2_11     Insert: bb_lr.r5b2_12     Insert: bb_lr.r5b2_13     Insert: bb_lr.r5b2_14     Insert: bb_lr.r5b2_15     Insert: bb_lr.r5b2_16     Insert: bb_lr.r5b2_17     Insert: bb_lr.r5b2_18     Insert: bb_lr.r5b2_19     Insert: bb_lr.r5b2_20     Insert: bb_lr.r5b2_21     Insert: bb_lr.r5b2_22     Insert: bb_lr.r5b2_23     Insert: bb_lr.r5b2_24     Insert: bb_lr.r5b2_25     Insert: bb_lr.r8b2_01     Insert: bb_lr.r8b2_02     Insert: bb_lr.r8b2_03     Insert: bb_lr.r8b2_04     Insert: bb_lr.r8b2_05     Insert: bb_lr.r8b2_06     Insert: bb_lr.r8b2_07     Insert: bb_lr.r8b2_08     Insert: bb_lr.r8b2_09     Insert: bb_lr.r8b2_10     Insert: bb_lr.r8b2_11     Insert: bb_lr.r8b2_12     Insert: bb_lr.r8b2_13     Insert: bb_lr.r8b2_14     Insert: bb_lr.r8b2_15     Insert: bb_lr.r8b2_16     Insert: bb_lr.r8b2_17     Insert: bb_lr.r8b2_18     Insert: bb_lr.r8b2_19     Insert: bb_lr.r8b2_20     Found suitable prebuilt kernel `default_bb3d`.
+Found suitable prebuilt kernel `default_bb3d`.
+Found suitable prebuilt kernel `default_only_xtrack`.
+Found suitable prebuilt kernel `default_only_xtrack`.
+Correcting closed orbit
+Correcting IR1 left
+Found suitable prebuilt kernel `only_xtrack_frozen_energy`.
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IR1 right
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IR5 left
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IR5 right
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IP1
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       Matching: model call n. 8       Matching: model call n. 9       Matching: model call n. 10       Matching: model call n. 11       
+
+Correcting IP2
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       
+
+Correcting IP5
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       Matching: model call n. 8       Matching: model call n. 9       Matching: model call n. 10       Matching: model call n. 11       
+
+Correcting IP8
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       
+
+Matching linear coupling
+Matching: model call n. 0       
+
+Matching tune and chromaticity
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting closed orbit
+Correcting IR1 left
+Found suitable prebuilt kernel `only_xtrack_frozen_energy`.
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IR1 right
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IR5 left
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IR5 right
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+Correcting IP1
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       Matching: model call n. 8       Matching: model call n. 9       Matching: model call n. 10       Matching: model call n. 11       
+
+Correcting IP2
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       
+
+Correcting IP5
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       Matching: model call n. 8       Matching: model call n. 9       Matching: model call n. 10       Matching: model call n. 11       
+
+Correcting IP8
+Found suitable prebuilt kernel `default_only_xtrack`.
+Matching: model call n. 0       
+
+Matching linear coupling
+Matching: model call n. 0       
+
+Matching tune and chromaticity
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       
+
+
+ --- Leveling in ip2 ---
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       Matching: model call n. 8       Matching: model call n. 9       Matching: model call n. 10       Matching: model call n. 11       Matching: model call n. 12       Matching: model call n. 13       Matching: model call n. 14       Matching: model call n. 15       Matching: model call n. 16       
+
+
+ --- Leveling in ip8 ---
+Matching: model call n. 0       Matching: model call n. 1       Matching: model call n. 2       Matching: model call n. 3       Matching: model call n. 4       Matching: model call n. 5       Matching: model call n. 6       Matching: model call n. 7       Matching: model call n. 8       Matching: model call n. 9       Matching: model call n. 10       Matching: model call n. 11       Matching: model call n. 12       Matching: model call n. 13       Matching: model call n. 14       Matching: model call n. 15       Matching: model call n. 16       Matching: model call n. 17       Matching: model call n. 18       Matching: model call n. 19       Matching: model call n. 20       Matching: model call n. 21       Matching: model call n. 22       Matching: model call n. 23       Matching: model call n. 24       Matching: model call n. 25       Matching: model call n. 26       Matching: model call n. 27       Matching: model call n. 28       Matching: model call n. 29       Matching: model call n. 30       Matching: model call n. 31       Matching: model call n. 32       Matching: model call n. 33       Matching: model call n. 34       Matching: model call n. 35       Matching: model call n. 36       Matching: model call n. 37       Matching: model call n. 38       Matching: model call n. 39       Matching: model call n. 40       Matching: model call n. 41       Matching: model call n. 42       Matching: model call n. 43       Matching: model call n. 44       Matching: model call n. 45       Matching: model call n. 46       Matching: model call n. 47       Matching: model call n. 48       Matching: model call n. 49       Matching: model call n. 50       Matching: model call n. 51       Matching: model call n. 52       Matching: model call n. 53       Matching: model call n. 54       Matching: model call n. 55       Matching: model call n. 56       Matching: model call n. 57       Matching: model call n. 58       Matching: model call n. 59       Matching: model call n. 60       Matching: model call n. 61       Matching: model call n. 62       Matching: model call n. 63       Matching: model call n. 64       Matching: model call n. 65       Matching: model call n. 66       Matching: model call n. 67       Matching: model call n. 68       
+
+Matching tune and chromaticity
+Matching: model call n. 0       
+
+Matching tune and chromaticity
+Matching: model call n. 0       
+
+Matching tune and chromaticity
+Matching: model call n. 0       
+
+Matching tune and chromaticity
+Matching: model call n. 0       
+
+Configuring beam-beam lenses...
+Crabbing at bb_ho.l1b1_01     Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Crabbing at bb_ho.l1b1_02     Crabbing at bb_ho.l1b1_03     Crabbing at bb_ho.l1b1_04     Crabbing at bb_ho.l1b1_05     Crabbing at bb_ho.l2b1_01     Crabbing at bb_ho.l2b1_02     Crabbing at bb_ho.l2b1_03     Crabbing at bb_ho.l2b1_04     Crabbing at bb_ho.l2b1_05     Crabbing at bb_ho.l5b1_01     Crabbing at bb_ho.l5b1_02     Crabbing at bb_ho.l5b1_03     Crabbing at bb_ho.l5b1_04     Crabbing at bb_ho.l5b1_05     Crabbing at bb_ho.l8b1_01     Crabbing at bb_ho.l8b1_02     Crabbing at bb_ho.l8b1_03     Crabbing at bb_ho.l8b1_04     Crabbing at bb_ho.l8b1_05     Crabbing at bb_ho.r1b1_01     Crabbing at bb_ho.r1b1_02     Crabbing at bb_ho.r1b1_03     Crabbing at bb_ho.r1b1_04     Crabbing at bb_ho.r1b1_05     Crabbing at bb_ho.r2b1_01     Crabbing at bb_ho.r2b1_02     Crabbing at bb_ho.r2b1_03     Crabbing at bb_ho.r2b1_04     Crabbing at bb_ho.r2b1_05     Crabbing at bb_ho.r5b1_01     Crabbing at bb_ho.r5b1_02     Crabbing at bb_ho.r5b1_03     Crabbing at bb_ho.r5b1_04     Crabbing at bb_ho.r5b1_05     Crabbing at bb_ho.r8b1_01     Crabbing at bb_ho.r8b1_02     Crabbing at bb_ho.r8b1_03     Crabbing at bb_ho.r8b1_04     Crabbing at bb_ho.r8b1_05     Crabbing at bb_ho.l1b2_01     Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Crabbing at bb_ho.l1b2_02     Crabbing at bb_ho.l1b2_03     Crabbing at bb_ho.l1b2_04     Crabbing at bb_ho.l1b2_05     Crabbing at bb_ho.l2b2_01     Crabbing at bb_ho.l2b2_02     Crabbing at bb_ho.l2b2_03     Crabbing at bb_ho.l2b2_04     Crabbing at bb_ho.l2b2_05     Crabbing at bb_ho.l5b2_01     Crabbing at bb_ho.l5b2_02     Crabbing at bb_ho.l5b2_03     Crabbing at bb_ho.l5b2_04     Crabbing at bb_ho.l5b2_05     Crabbing at bb_ho.l8b2_01     Crabbing at bb_ho.l8b2_02     Crabbing at bb_ho.l8b2_03     Crabbing at bb_ho.l8b2_04     Crabbing at bb_ho.l8b2_05     Crabbing at bb_ho.r1b2_01     Crabbing at bb_ho.r1b2_02     Crabbing at bb_ho.r1b2_03     Crabbing at bb_ho.r1b2_04     Crabbing at bb_ho.r1b2_05     Crabbing at bb_ho.r2b2_01     Crabbing at bb_ho.r2b2_02     Crabbing at bb_ho.r2b2_03     Crabbing at bb_ho.r2b2_04     Crabbing at bb_ho.r2b2_05     Crabbing at bb_ho.r5b2_01     Crabbing at bb_ho.r5b2_02     Crabbing at bb_ho.r5b2_03     Crabbing at bb_ho.r5b2_04     Crabbing at bb_ho.r5b2_05     Crabbing at bb_ho.r8b2_01     Crabbing at bb_ho.r8b2_02     Crabbing at bb_ho.r8b2_03     Crabbing at bb_ho.r8b2_04     Crabbing at bb_ho.r8b2_05     bb_lr.l1b1_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b1_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b1_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b1_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b1_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b1_25 The beams are longitudinally shifted
+bb_lr.l2b1_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b1_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b1_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b1_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b1_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b1_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b1_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b1_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b1_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b1_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b1_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b1_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b1_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b1_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b1_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b1_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b1_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b1_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b1_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b1_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b1_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b1_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b1_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b1_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b1_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b1_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b1_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b1_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b1_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b1_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b1_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b1_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b1_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b1_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b1_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b2_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b2_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b2_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b2_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l1b2_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b2_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b2_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b2_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b2_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l2b2_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b2_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b2_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b2_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b2_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l5b2_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b2_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b2_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b2_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b2_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.l8b2_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b2_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b2_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b2_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b2_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b2_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r1b2_25 The beams are longitudinally shifted
+bb_lr.r2b2_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b2_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b2_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b2_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r2b2_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b2_21 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b2_22 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b2_23 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b2_24 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r5b2_25 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b2_16 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b2_17 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b2_18 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b2_19 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+bb_lr.r8b2_20 Reference systems are not parallel
+Smaller that 5e-3, tolerated.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Compiling ContextCpu kernels...
+Done compiling ContextCpu kernels.
+Warning! scale_with_transverse_norm_emitt is deprecated. Use nemitt_x and nemitt_y instead.
+Disable xdeps expressions
+Remove markers
+Remove inactive multipoles
+Merge consecutive multipoles
+Remove redundant apertures
+Remove zero length drifts
+Merge consecutive drifts
+Use simple bends
+Use simple quadrupoles
+Rebuild tracker data
+Found suitable prebuilt kernel `default_bb3d`.
+Elapsed time: 0.04979205131530762 s
+Elapsed time per particle per turn: 199.16820526123047 us
