@@ -34,35 +34,34 @@ if tree_maker is not None and "log_file" in configuration:
 # ==================================================================================================
 # --- Build particle distribution
 # ==================================================================================================
+# # Define radius distribution
+# r_min = config_particles["r_min"]
+# r_max = config_particles["r_max"]
+# n_r = config_particles["n_r"]
+# radial_list = np.linspace(r_min, r_max, n_r, endpoint=False)
 
-# Define radius distribution
-r_min = config_particles["r_min"]
-r_max = config_particles["r_max"]
-n_r = config_particles["n_r"]
-radial_list = np.linspace(r_min, r_max, n_r, endpoint=False)
+# # Define angle distribution
+# n_angles = config_particles["n_angles"]
+# theta_list = np.linspace(0, 90, n_angles + 2)[1:-1]
 
-# Define angle distribution
-n_angles = config_particles["n_angles"]
-theta_list = np.linspace(0, 90, n_angles + 2)[1:-1]
+# # Define particle distribution as a cartesian product of the above
+# particle_list = [
+#     (particle_id, ii[0], ii[1])
+#     for particle_id, ii in enumerate(itertools.product(radial_list, theta_list))
+# ]
 
-# Define particle distribution as a cartesian product of the above
-particle_list = [
-    (particle_id, ii[0], ii[1])
-    for particle_id, ii in enumerate(itertools.product(radial_list, theta_list))
-]
+# # Split distribution into several chunks for parallelization
+# n_split = config_particles["n_split"]
+# particle_list = list(np.array_split(particle_list, n_split))
 
-# Split distribution into several chunks for parallelization
-n_split = config_particles["n_split"]
-particle_list = list(np.array_split(particle_list, n_split))
-
-# Write distribution to parquet files
-distributions_folder = "particles"
-os.makedirs(distributions_folder, exist_ok=True)
-for idx_chunk, my_list in enumerate(particle_list):
-    pd.DataFrame(
-        my_list,
-        columns=["particle_id", "normalized amplitude in xy-plane", "angle in xy-plane [deg]"],
-    ).to_parquet(f"{distributions_folder}/{idx_chunk:02}.parquet")
+# # Write distribution to parquet files
+# distributions_folder = "particles"
+# os.makedirs(distributions_folder, exist_ok=True)
+# for idx_chunk, my_list in enumerate(particle_list):
+#     pd.DataFrame(
+#         my_list,
+#         columns=["particle_id", "normalized amplitude in xy-plane", "angle in xy-plane [deg]"],
+#     ).to_parquet(f"{distributions_folder}/{idx_chunk:02}.parquet")
 
 # ==================================================================================================
 # --- Build collider from mad model

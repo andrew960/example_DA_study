@@ -288,6 +288,30 @@ collider.to_json("final_collider.json")
 # ==================================================================================================
 # --- Prepare particles distribution for tracking
 # ==================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 particle_df = pd.read_parquet(config_sim["particle_file"])
 
 r_vect = particle_df["normalized amplitude in xy-plane"].values
