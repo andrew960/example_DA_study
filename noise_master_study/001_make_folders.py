@@ -30,7 +30,7 @@ d_config_particles = {}
 # Radius of the initial particle distribution
 d_config_particles["r_min"] = 2
 d_config_particles["r_max"] = 10
-d_config_particles["n_r"] = 2 * 16 * (d_config_particles["r_max"] - d_config_particles["r_min"])
+d_config_particles["n_r"] = 1#2 * 16 * (d_config_particles["r_max"] - d_config_particles["r_min"])
 
 # Number of angles for the initial particle distribution
 d_config_particles["n_angles"] = 5
@@ -254,8 +254,11 @@ d_config_simulation["delta_max"] = 27.0e-5
 # optimal DA (e.g. tune, chroma, etc).
 # ==================================================================================================
 # Scan tune with step of 0.001 (need to round to correct for numpy numerical instabilities)
-array_qx = np.round(np.arange(62.305, 62.330, 0.001), decimals=4)[:5]
-array_qy = np.round(np.arange(60.305, 60.330, 0.001), decimals=4)[:5]
+slicetune = 3
+array_qx = np.round(np.arange(62.310, 62.330, 0.001), decimals=4)[:slicetune]
+array_qy = np.round(np.arange(60.320, 60.330, 0.001), decimals=4)[:slicetune]
+print('array_qx =',array_qx)
+print('array_qy =',array_qy)
 
 # In case one is doing a tune-tune scan, to decrease the size of the scan, we can ignore the
 # working points too close to resonance. Otherwise just delete this variable in the loop at the end
