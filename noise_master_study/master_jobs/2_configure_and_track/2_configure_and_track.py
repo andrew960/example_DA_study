@@ -297,23 +297,23 @@ collider.to_json("final_collider.json")
 # ==================================================================================================
 ctx = xo.ContextCupy()
 p0c = config['p0c']
-sigma_z = config['sigma_z']
-normal_emitt_x = config['nemitt_x']
-normal_emitt_y = config['nemitt_y']
+sigma_z = config_bb['sigma_z']
+normal_emitt_x = config_bb['nemitt_x']
+normal_emitt_y = config_bb['nemitt_y']
 input = config['xline_json']
 
 with open(input, 'r') as fid:
     loaded_dct = json.load(fid)
-line = xt.Line.from_dict(loaded_dct)
+line = xt.Line.from_dict(loaded_dct['lines']['lhcb1'])
 
-N=config['n_turns'] #Total number of turns
+N=config_sim['n_turns'] #Total number of turns
 sampling= 1 #Sampling rate, 1 sample every 'sampling' turns
 scale_noise = 1 #Scale noise by this factor
 
 particle_0 = xp.Particles(mass0=xp.PROTON_MASS_EV, q0=1, p0c=p0c, x=1e-5, y=1e-5)
 tracker_normal = xt.Tracker(_context=ctx, line=line)
 ref = line.find_closed_orbit(particle_ref = particle_0)
-tw_normal= line.twiss(ref)
+tw_normal= line.twiss(ref) 
 tw_normal['name'] = list(tw_normal['name'])
 tw_df = produce_twiss_df(tw_normal)
 dx_3 = tw_df[tw_df['name'] == 'ip3'].dx.values[0]
@@ -342,11 +342,12 @@ p0_df = pd.DataFrame({
 N_particles = 20000
 bunch_intensity = config['bunch_intensity']
 print('Generating N_particles =', N_particles)
+
 particles = xp.generate_matched_gaussian_bunch(
                 num_particles=N_particles, total_intensity_particles=bunch_intensity,
                 nemitt_x=normal_emitt_x, nemitt_y=normal_emitt_y, sigma_z=sigma_z,
                 particle_ref=p0_normal,
-                tracker=tracker_normal)
+                line=line)
 
 
 print('Generation complete')
@@ -394,7 +395,6 @@ radtodeg = 180/np.pi
 print(f'Phase noise mu = {np.mean(ph_noise[0]/radtodeg)}, var = {np.var(ph_noise[0]/radtodeg)}')
 print(f'Amplitude noise mu = {np.mean(a_noise[0])}, var = {np.var(a_noise[0])}')
 jj = 0
-start = time.time()
 print("Begin tracking N_particles = ", N_particles)
 print("Total turns =", N)
 print('------------------------------------')
@@ -452,15 +452,12 @@ for ii in range(N):
         emits_y[jj]=ey
         jj+=1
 
-    if(ii%111111 == 0):
-        end = time.time()
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-        print('Round = ',ii,'Time(s) = ',end-start,'Current Time =', current_time)
+    if(ii%11 == 0):
+        print('Round = ',ii)
         currstates = ctx.nparray_from_context_array(particles.state)
         print('Emittance x = ',ex,'Emittance y = ',ey)
         print('Lost particles = ', len(currstates[currstates == -1]))
-    tracker_normal.track(particles, num_turns=sampling,turn_by_turn_monitor=False)
+    line.track(particles, num_turns=sampling,turn_by_turn_monitor=False)
 
 xs_i = np.array(xs_i)
 pxs_i = np.array(pxs_i)

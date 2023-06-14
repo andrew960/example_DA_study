@@ -14,7 +14,7 @@
         - gen_config_orbit_correction.py
         - utilsaf.py
       run_on: 'htc_GPU' # 'htc' 
-      htc_job_flavor: 'tomorrow' # optional parameter to define job flavor, default is espresso
+      htc_job_flavor: 'microcentury' # optional parameter to define job flavor, default is espresso
   # Children will be added below in the script 001_make_folders.py
   children:
 

@@ -243,7 +243,7 @@ d_config_collider["config_beambeam"] = d_config_beambeam
 d_config_simulation = {}
 
 # Number of turns to track
-d_config_simulation["n_turns"] = 200
+d_config_simulation["n_turns"] = 10
 
 # Initial off-momentum
 d_config_simulation["delta_max"] = 27.0e-5
@@ -353,7 +353,7 @@ root.make_folders(generate_run_sh_htc)
 print("The tree folders are ready.")
 print("--- %s seconds ---" % (time.time() - start_time))
 
-num_turns = config['n_turns']
+num_turns = d_config_simulation["n_turns"]
 print(f'Generating noise for {num_turns} turns')
 phnoise = config['ph_noise']
 anoise = config['a_noise']
