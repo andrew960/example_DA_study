@@ -165,6 +165,21 @@ config_collider:
         - corr_co_acbyhs5.r8b1
 
 # Configuration for the track job
+# Description of the xline
+xline_json :    'final_collider.json'
+p0c : 7000.0e+9 
+bunch_intensity : 2.2e+11 
+
+#noise file
+noise_file : '../../noise.py'
+
+# tracking
+n_turns    :    100    # number of turns to track
+
+
+
+
+
 config_simulation:
 
   # Collider file

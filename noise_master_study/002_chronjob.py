@@ -10,7 +10,7 @@ import os
 # ==================================================================================================
 class cluster:
     def __init__(self, run_on="local_pc"):
-        if run_on in ["local_pc", "htc", "slurm"]:
+        if run_on in ["local_pc", "htc", "slurm",'htc_GPU']:
             self.run_on = run_on
         else:
             import sys
@@ -45,6 +45,24 @@ class cluster:
                         str(list_of_nodes[0].depth)
                     ]["htc_job_flavor"]
                     fid.write(f'+JobFlavour  = "{htc_job_flavor}"\n')
+            elif self.run_on == 'htc_GPU':
+                fid.write('# This is a HTCondor submission file for GPU\n')
+                fid.write('error  = error.txt\n')
+                fid.write('output = output.txt\n')
+                fid.write('log  = log.txt\n')
+                fid.write('universe = vanilla\n')
+                fid.write('+SingularityImage = "/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/afornara/dockerfile_test:latest"\n')
+                #fid.write('requirements = Machine =!= LastRemoteHost && regexp("100", Target.CUDADeviceName)\n')
+                fid.write('request_GPUs = 1\n')
+                fid.write('request_CPUs = 1\n')
+                #fid.write('GPU_DISCOVERY_EXTRA = -extra\n')
+                # fid.write('queue\n')
+                # # if user has defined a htc_job_flavor in config.yaml otherwise default is "espresso"
+                if "htc_job_flavor" in list_of_nodes[0].root.parameters['generations'][str(list_of_nodes[0].depth)]:
+                    htc_job_flavor = (list_of_nodes[0]
+                                    .root
+                                    .parameters["generations"][str(list_of_nodes[0].depth)]["htc_job_flavor"])
+                    fid.write(f'+JobFlavour  = "{htc_job_flavor}"\n')
             for node in list_of_nodes:
                 # Get path node
                 path_node = node.get_abs_path()
@@ -72,6 +90,14 @@ class cluster:
                         # initialdir is needed so that each job has it own output, error and log.txt
                         fid.write(f"initialdir = {path_node}\n")
                         fid.write(f"executable = {path_node}/run.sh\nqueue\n")
+
+                    elif self.run_on == 'htc_GPU':
+                        # initialdir is needed so that each job has it own output, error and log.txt
+                        fid.write( "initialdir = "
+                                  f"{node.get_abs_path()}\n")
+                        fid.write( "executable = "
+                                  f"{node.get_abs_path()}/run.sh\n"
+                                   "queue\n" )
             # tail
             if self.run_on == "local_pc":
                 fid.write(f"#{self.run_on}\n")
@@ -81,6 +107,8 @@ class cluster:
                 fid.write(f"#{self.run_on}\n")
             elif self.run_on == "htc":
                 fid.write(f"#{self.run_on}\n")
+            elif self.run_on == 'htc_GPU':
+                fid.write(f'#{self.run_on}\n')
 
     def submit(self, filename):
         if self.run_on == "local_pc":
@@ -92,6 +120,8 @@ class cluster:
             os.system(f"bash {filename}")
         elif self.run_on == "htc":
             os.system(f"condor_submit {filename}")
+        elif self.run_on == 'htc_GPU':
+            os.system(f'condor_submit {filename}')
 
     def running_jobs(self):
         my_list = []
@@ -113,6 +143,8 @@ class cluster:
         elif self.run_on == "slurm":
             return []
         elif self.run_on == "htc":
+            return []
+        elif self.run_on == 'htc_GPU':
             return []
 
     def queuing_jobs(self):

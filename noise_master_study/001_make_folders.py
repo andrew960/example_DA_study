@@ -10,6 +10,7 @@ import yaml
 import shutil
 import copy
 import json
+from utilsaf import *
 from user_defined_functions import (
     generate_run_sh_htc,
     get_worst_bunch,
@@ -52,7 +53,7 @@ d_config_particles["n_split"] = 5
 d_config_mad = {"beam_config": {"lhcb1": {}, "lhcb2": {}}}
 
 # Optic file path (round or flat)
-d_config_mad["optics_file"] = "acc-models-lhc/flatcc/opt_flathv_75_180_1500_thin.madx"
+d_config_mad["optics_file"] = "acc-models-lhc/round/opt_round_150_1500_thin.madx"
 
 # Beam energy (for both beams)
 beam_energy_tot = 7000
@@ -254,7 +255,7 @@ d_config_simulation["delta_max"] = 27.0e-5
 # optimal DA (e.g. tune, chroma, etc).
 # ==================================================================================================
 # Scan tune with step of 0.001 (need to round to correct for numpy numerical instabilities)
-slicetune = 3
+slicetune = 1
 array_qx = np.round(np.arange(62.310, 62.330, 0.001), decimals=4)[:slicetune]
 array_qy = np.round(np.arange(60.320, 60.330, 0.001), decimals=4)[:slicetune]
 print('array_qx =',array_qx)
@@ -293,7 +294,7 @@ children["base_collider"]["config_collider"] = d_config_mad
 # ! otherwise the dictionnary will be mutated for all the children.
 # ==================================================================================================
 track_array = np.arange(d_config_particles["n_split"])
-for idx_job, (track, qx, qy) in enumerate(itertools.product(track_array, array_qx, array_qy)):
+for idx_job, (qx, qy) in enumerate(itertools.product(array_qx, array_qy)):
     # If requested, ignore conditions below the upper diagonal as they can't be reached in the LHC
     if only_keep_upper_triangle:
         if qy < (qx - 2 + 0.0039):  # 0.039 instead of 0.04 to avoid rounding errors
@@ -305,7 +306,7 @@ for idx_job, (track, qx, qy) in enumerate(itertools.product(track_array, array_q
         d_config_collider["config_knobs_and_tuning"]["qy"][beam] = float(qy)
 
     # Complete the dictionnary for the tracking
-    d_config_simulation["particle_file"] = f"../particles/{track:02}.parquet"
+    #d_config_simulation["particle_file"] = f"../particles/{track:02}.parquet"
     d_config_simulation["collider_file"] = f"../collider/collider.json"
 
     # Add a child to the second generation, with all the parameters for the collider and tracking
@@ -351,6 +352,18 @@ start_time = time.time()
 root.make_folders(generate_run_sh_htc)
 print("The tree folders are ready.")
 print("--- %s seconds ---" % (time.time() - start_time))
+
+num_turns = config['n_turns']
+print(f'Generating noise for {num_turns} turns')
+phnoise = config['ph_noise']
+anoise = config['a_noise']
+ph_noise = generate_phase_noise(ph_noise_rad = phnoise, ph_noise_mu = 0,scale_noise = 1, turns = num_turns)
+a_noise = generate_amplitude_noise(a_noise_mu = 0, a_noise_sigma = anoise,scale_noise = 1, turns = num_turns)
+ph_noise = np.array(ph_noise)
+a_noise = np.array(a_noise)
+with open('noise.py', 'wb') as f:
+   np.save(f,ph_noise)
+   np.save(f,a_noise)
 
 # Rename log files according to study
 shutil.move("tree_maker.json", f"tree_maker_{study_name}.json")
