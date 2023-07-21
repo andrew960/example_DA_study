@@ -412,10 +412,10 @@ def configure_collider(
                         return obj.tolist()
                     return super(NpEncoder, self).default(obj)
 
-            with open("collider_ip8.json", "w") as fid:
+            with open("collider_new.json", "w") as fid:
                 json.dump(collider_dict, fid, cls=NpEncoder)
         else:
-            collider.to_json("collider_ip8.json")
+            collider.to_json("collider_new.json")
 
     if return_collider_before_bb:
         return collider, config_bb, collider_before_bb
