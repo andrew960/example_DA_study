@@ -1,6 +1,5 @@
 # Configuration for tuning of the collider
 config_collider:
-
   config_knobs_and_tuning:
     knob_settings:
       # Orbit knobs
@@ -38,7 +37,7 @@ config_collider:
       # RF voltage and phases
       vrf400: 16.0 # [MV]
       lagrf400.b1: 0.5 # [rad]
-      lagrf400.b2: 0. # [rad]
+      lagrf400.b2: 0.5 # [rad]
 
       # Octupoles
       i_oct_b1: 60. # [A]
@@ -61,7 +60,7 @@ config_collider:
     dqy:
       lhcb1: 15
       lhcb2: 15
-    
+
     # Linear coupling
     delta_cmr: 0.001
     delta_cmi: 0.0
@@ -91,19 +90,28 @@ config_collider:
       ip5: 25
       ip8: 20
     sigma_z: 0.0761
-    num_particles_per_bunch: 1.4e11
+    num_particles_per_bunch: 140000000000.0
     nemitt_x: 2.5e-6
     nemitt_y: 2.5e-6
     mask_with_filling_pattern:
-      pattern_fname: path_to_8b4e_1972b_1960_1178_1886_224bpi_12inj_800ns_bs200ns.json
+      pattern_fname: ../filling_scheme/8b4e_1972b_1960_1178_1886_224bpi_12inj_800ns_bs200ns.json
       i_bunch_b1: 1963 # If not specified, the bunch with the worst schedule is chosen
       i_bunch_b2: 1963 # Same. A value for i_bunch_b1 and i_bunch_b2 must be specified if pattern_fname is specified
+
+  config_lumi_leveling_ip1_5:
+    luminosity: 5.0e+34
+    num_colliding_bunches: null # This will be set automatically according to the filling scheme
+    vary:
+      - num_particles_per_bunch
+    constraints:
+      max_intensity: 2.3e11
+      max_PU: 160
 
   skip_leveling: false
   config_lumi_leveling:
     ip2:
       separation_in_sigmas: 5
-      plane: "x"
+      plane: x
       impose_separation_orthogonal_to_crossing: false
       knobs:
         - on_sep2
@@ -122,7 +130,7 @@ config_collider:
         - corr_co_acbyhs4.l2b1
         - corr_co_acbyvs4.r2b2
         - corr_co_acbyhs4.r2b2
-        # to close the bumps
+          # to close the bumps
         - corr_co_acbyvs4.l2b2
         - corr_co_acbyhs4.l2b2
         - corr_co_acbyvs4.r2b1
@@ -131,10 +139,9 @@ config_collider:
         - corr_co_acbyvs5.l2b2
         - corr_co_acbchs5.r2b1
         - corr_co_acbcvs5.r2b1
-
     ip8:
       luminosity: 2.0e+33
-      num_colliding_bunches: null # This will be set automatically according to the filling scheme 
+      num_colliding_bunches: null # This will be set automatically according to the filling scheme
       impose_separation_orthogonal_to_crossing: true
       knobs:
         - on_sep8h
@@ -154,7 +161,7 @@ config_collider:
         - corr_co_acbyhs4.l8b1
         - corr_co_acbyvs4.r8b2
         - corr_co_acbyhs4.r8b2
-        # to close the bumps
+          # to close the bumps
         - corr_co_acbyvs4.l8b2
         - corr_co_acbyhs4.l8b2
         - corr_co_acbyvs4.r8b1
@@ -164,27 +171,25 @@ config_collider:
         - corr_co_acbyvs5.r8b1
         - corr_co_acbyhs5.r8b1
 
-# Configuration for the track job
 config_simulation:
-
   # Collider file
-  collider_file :    '../collider/collider.json'
+  collider_file: ../1_build_distr_and_collider/collider/collider.json
 
   # Distribution in the normalized xy space
-  particle_file:  '../particles/000.parquet'
+  particle_file: ../1_build_distr_and_collider/particles/00.parquet
 
   # Initial off-momentum
-  delta_max  :    27.e-5   
+  delta_max: 27.e-5
 
   # Tracking
-  n_turns    :    1000     # number of turns to track
+  n_turns: 1000 # number of turns to track
 
   # Beam to track
-  beam: 'lhcb1' #lhcb1 or lhcb2
+  beam: lhcb1 #lhcb1 or lhcb2
 
 # Save collider or not
 dump_collider: false
 dump_config_in_collider: false
 
 # Log
-log_file: 'tree_maker.log'
+log_file: tree_maker.log

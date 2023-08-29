@@ -23,18 +23,7 @@ cd example_DA_study
 source make_miniforge.sh
 ```
 
-This should install conda along with the required python modules. If something goes wrong, you can execute the commands in the ```make_miniforge.sh``` script manually, one line after the other.
-
-Then do:
-  
-```bash
-cd modules/xmask/
-git submodule init
-git submodule update
-```
-
-Git may trigger an error after ```git submodule init```, in which case you can mark the directory as safe using the command suggested by git, and enter ```git submodule init``` and ```git submodule update``` again. If this still doesn't work, you can try to manually get into ```modules/xmask/xmask/lhc``` , manually remove ```lhcerrors``` with ```rm -rf lhcerrors``` (which is potentially empty), and finally git clone ```https://github.com/lhcopt/lhcerrors.git```.
-
+This should install conda along with the required python modules. If something goes wrong, you can execute the commands in the ```make_miniforge.sh``` script manually, one line after the other. Git may trigger an error after ```git submodule init```, in which case you can mark the directory as safe using the command suggested by git, and enter ```git submodule init``` and ```git submodule update``` again. If this still doesn't work, you can try to manually get into ```modules/xmask/xmask/lhc``` , manually remove ```lhcerrors``` with ```rm -rf lhcerrors``` (which is potentially empty), and finally git clone ```https://github.com/lhcopt/lhcerrors.git```.
 
 ## Running a simple parameter scan simulation
 
@@ -208,7 +197,6 @@ At the moment, all the collider parameters can be scanned without requiring exte
 - chromaticity (```dqx, dqy```)
 - octupole current (```i_oct_b1, i_oct_b2```)
 - bunch being tracked (```i_bunch_b1, i_bunch_b2```)
-- separation at IP2 (```on_sep2```)
 
 At generation 1, the base collider is built with a default set of parameters for the optics (which are explicitely set in ```001_make_folder.py```). At generation 2, the base collider is tailored to the parameters being scanned. That is,
  the tune and chroma are matched, the luminosity leveling is computed (if leveling is required), and the beam-beam lenses
@@ -218,8 +206,37 @@ It should be relatively easy to accomodate the scripts for other parameters. In 
 
 ## Using computing clusters
 
-The scripts in the repository allows for an easy deployment of the simulations on HTCondor (CERN cluster) and Slurm (CNAF.INFN cluste). Please consult the corresponding tutorials ([here](https://abpcomputing.web.cern.ch/guides/htcondor/), and [here](https://abpcomputing.web.cern.ch/computing_resources/hpc_cnaf/)) to set up the clusters on your machine.
+### General procedure
+
+The scripts in the repository allows for an easy deployment of the simulations on HTCondor (CERN cluster) and Slurm (CNAF.INFN cluster). Please consult the corresponding tutorials ([here](https://abpcomputing.web.cern.ch/guides/htcondor/), and [here](https://abpcomputing.web.cern.ch/computing_resources/hpc_cnaf/)) to set up the clusters on your machine.
 
 Once, this is done, jobs can be executed on HTCondor by setting ```run_on: 'htc'``` instead of ```run_on: 'local_pc'``` in ```master_study/config.yaml```. Similarly, jobs can be executed on the CNAF cluster by setting ```run_on: 'slurm'```.
 
 ⚠️ **Be careful of not running the ```master_study/002_chronjob.py``` script several times, as this will submit the same jobs several times.** In the future, this will hopefully be fixed by adding a check in the script to see if the jobs have already been submitted.
+
+### Using Docker images
+
+For reproducibility purposes and/or limiting the load on AFS or EOS drive, one can use Docker images to run the simulations. A registry of Docker images is available at "/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/", and some ready-to-use for DA simulations Docker images are available at ""/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/cdroin/da-study-docker" (this is the default directory for images in the ```002_chronjob.py``` file). To learn more about building Docker images and hosting them on the CERN registry, please consult the [corresponding tutorial](https://abpcomputing.web.cern.ch/guides/docker_on_htcondor/) abd the [corresponding repository](https://gitlab.cern.ch/unpacked/sync).
+
+#### HTCondor
+When running simulations on HTCondor, Docker images are be pulled directly from CVMFS through the submit file. No additional configuration is required, except for setting ```run_on: 'htc_docker'``` in ```master_study/config.yaml```.
+
+#### Slurm
+
+Things are a bit tricker with Slurm, as the Docker image must first be manually pulled from CVMFS, and then loaded on the node after Singularity-ize it. The pulling of the image is only needed the first time, and can be done with e.g. (for the image ```cdroin/da-study-docker```):
+  
+  ```bash
+  pull docker://gitlab-registry.cern.ch/cdroin/da-study-docker
+  ```
+
+However, due to unknown reason, only some nodes of INFN-CNAF will correctly execute this command. For instance, it didn't work on the default CPU CERN node (```hpc-201-11-01-a```), but it did on an alternative one (```hpc-201-11-02-a```). We recommand using either ```hpc-201-11-02-a``` or a GPU node (e.g. ```hpc-201-11-35```) to pull the image. Once the image is pulled, it will be accessible from any node. 
+
+For testing purposes, one can then run the image with Singularity directly on the node (not required):
+  
+  ```bash
+  singularity run da-study-docker_latest.sif
+  ```
+
+In practice, the ```002_chronjob.py``` script will take care of mouting the image and running it on the node with the correct miniforge distribution. All you have to do is change the ```run_on``` parameter in ```master_study/config.yaml``` to ```run_on: 'slurm_docker'```.
+
+⚠️ **The slurm docker scripts are a still experimental**. For instance, simulations seem to run more slowly when containerized. In addition, you may need to adapt the ```002_chronjob.py``` script and the ```make_miniforge.sh``` script to your needs. For instance, at the time of writing this documentation, symlinks path in the front-end node of INFN-CNAF are currently broken, meaning that some temporary fixs are implemented. This will hopefully be fixed in the future, and the fixs should not prevent the scripts from running anyway.

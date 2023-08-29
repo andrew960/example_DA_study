@@ -5,19 +5,12 @@ import json
 def generate_run_sh(node, generation_number):
     python_command = node.root.parameters["generations"][generation_number]["job_executable"]
     return (
-        f'source {node.root.parameters["setup_env_script"]}\n'
-        f"cd {node.get_abs_path()}\n"
-        f"python {python_command} > output.txt 2> error.txt\n"
-    )
-
-
-def generate_run_sh_htc(node, generation_number):
-    python_command = node.root.parameters["generations"][generation_number]["job_executable"]
-    return (
-        f"#!/bin/bash\nsource {node.root.parameters['setup_env_script']}\ncd"
-        f" {node.get_abs_path()}\npython {python_command} > output.txt 2> error.txt\nrm -rf final_*"
-        " modules optics_repository optics_toolkit tools tracking_tools temp mad_collider.log"
-        " __pycache__ twiss* errors fc* optics_orbit_at*\n"
+        f"#!/bin/bash\n"
+        + f"source {node.root.parameters['setup_env_script']}\n"
+        + f"cd {node.get_abs_path()}\n"
+        + f"python {python_command} > output.txt 2> error.txt\n"
+        + f"rm -rf final_* modules optics_repository optics_toolkit tools tracking_tools temp"
+        f" mad_collider.log __pycache__ twiss* errors fc* optics_orbit_at*\n"
     )
 
 
@@ -315,6 +308,56 @@ def reformat_filling_scheme_from_lpc(filling_scheme_path, fill_number=None):
                     init_batch = initial[i] + counter * (n_bunches[i] + 7)
                     B2[init_batch : init_batch + n_bunches[i]] = np.ones(n_bunches[i])
                     counter += 1
+    data_json = {"beam1": [int(ii) for ii in B1], "beam2": [int(ii) for ii in B2]}
+
+    with open(filling_scheme_path.split(".json")[0] + "_converted.json", "w") as file_bool:
+        json.dump(data_json, file_bool)
+    return B1, B2
+
+
+def reformat_filling_scheme_from_lpc_alt(filling_scheme_path):
+    """
+    Alternative to the function above, as sometimes the injection information is not present in the
+    file. Not optimized but works.
+    """
+
+    # Load the filling scheme directly if json
+    with open(filling_scheme_path, "r") as fid:
+        data = json.load(fid)
+
+    # Take the first fill number
+    fill_number = list(data["fills"].keys())[0]
+
+    # Do the conversion (Matteo's code)
+    string = ""
+    B1 = np.zeros(3564)
+    B2 = np.zeros(3564)
+    l_lines = data["fills"][f"{fill_number}"]["csv"].split("\n")
+    for idx, line in enumerate(l_lines):
+        # First time one encounters a line with 'Slot' in it, start indexing
+        if "Slot" in line:
+            # B1 is initially empty
+            if np.sum(B1) == 0:
+                for idx_2, line_2 in enumerate(l_lines[idx + 1 :]):
+                    l_line = line_2.split(",")
+                    if len(l_line) > 1:
+                        slot = l_line[1]
+                        B1[int(slot)] = 1
+                    else:
+                        break
+
+            # Same with B2
+            elif np.sum(B2) == 0:
+                for idx_2, line_2 in enumerate(l_lines[idx + 1 :]):
+                    l_line = line_2.split(",")
+                    if len(l_line) > 1:
+                        slot = l_line[1]
+                        B2[int(slot)] = 1
+                    else:
+                        break
+            else:
+                break
+
     data_json = {"beam1": [int(ii) for ii in B1], "beam2": [int(ii) for ii in B2]}
 
     with open(filling_scheme_path.split(".json")[0] + "_converted.json", "w") as file_bool:

@@ -1,5 +1,10 @@
 # Imports
 import json
+import logging
+from scipy.constants import c as clight
+from scipy.optimize import minimize_scalar
+import xtrack as xt
+import numpy as np
 
 
 # Function to generate dictionnary containing the orbit correction setup
@@ -244,6 +249,173 @@ def generate_orbit_correction_setup():
         ),
     }
     return correction_setup
+
+
+def luminosity_leveling(
+    collider,
+    config_lumi_leveling,
+    config_beambeam,
+    additional_targets_lumi=[],
+    crab=False,
+):
+    for ip_name in config_lumi_leveling.keys():
+        print(f"\n --- Leveling in {ip_name} ---")
+
+        config_this_ip = config_lumi_leveling[ip_name]
+        bump_range = config_this_ip["bump_range"]
+
+        assert config_this_ip[
+            "preserve_angles_at_ip"
+        ], "Only preserve_angles_at_ip=True is supported for now"
+        assert config_this_ip[
+            "preserve_bump_closure"
+        ], "Only preserve_bump_closure=True is supported for now"
+
+        beta0_b1 = collider.lhcb1.particle_ref.beta0[0]
+        f_rev = 1 / (collider.lhcb1.get_length() / (beta0_b1 * clight))
+
+        targets = []
+        vary = []
+
+        if "luminosity" in config_this_ip.keys():
+            targets.append(
+                xt.TargetLuminosity(
+                    ip_name=ip_name,
+                    luminosity=config_this_ip["luminosity"],
+                    crab=crab,
+                    tol=1e30,  # 0.01 * config_this_ip["luminosity"],
+                    f_rev=f_rev,
+                    num_colliding_bunches=config_this_ip["num_colliding_bunches"],
+                    num_particles_per_bunch=config_beambeam["num_particles_per_bunch"],
+                    sigma_z=config_beambeam["sigma_z"],
+                    nemitt_x=config_beambeam["nemitt_x"],
+                    nemitt_y=config_beambeam["nemitt_y"],
+                    log=True,
+                )
+            )
+
+            # Added this line for constraints
+            targets.extend(additional_targets_lumi)
+        elif "separation_in_sigmas" in config_this_ip.keys():
+            targets.append(
+                xt.TargetSeparation(
+                    ip_name=ip_name,
+                    separation_norm=config_this_ip["separation_in_sigmas"],
+                    tol=1e-4,  # in sigmas
+                    plane=config_this_ip["plane"],
+                    nemitt_x=config_beambeam["nemitt_x"],
+                    nemitt_y=config_beambeam["nemitt_y"],
+                )
+            )
+        else:
+            raise ValueError("Either `luminosity` or `separation_in_sigmas` must be specified")
+
+        if config_this_ip["impose_separation_orthogonal_to_crossing"]:
+            targets.append(xt.TargetSeparationOrthogonalToCrossing(ip_name="ip8"))
+        vary.append(xt.VaryList(config_this_ip["knobs"], step=1e-4))
+
+        # Target and knobs to rematch the crossing angles and close the bumps
+        for line_name in ["lhcb1", "lhcb2"]:
+            targets += [
+                # Preserve crossing angle
+                xt.TargetList(
+                    ["px", "py"], at=ip_name, line=line_name, value="preserve", tol=1e-7, scale=1e3
+                ),
+                # Close the bumps
+                xt.TargetList(
+                    ["x", "y"],
+                    at=bump_range[line_name][-1],
+                    line=line_name,
+                    value="preserve",
+                    tol=1e-5,
+                    scale=1,
+                ),
+                xt.TargetList(
+                    ["px", "py"],
+                    at=bump_range[line_name][-1],
+                    line=line_name,
+                    value="preserve",
+                    tol=1e-5,
+                    scale=1e3,
+                ),
+            ]
+
+        vary.append(xt.VaryList(config_this_ip["corrector_knob_names"], step=1e-7))
+
+        # Match
+        collider.match(
+            lines=["lhcb1", "lhcb2"],
+            ele_start=[bump_range["lhcb1"][0], bump_range["lhcb2"][0]],
+            ele_stop=[bump_range["lhcb1"][-1], bump_range["lhcb2"][-1]],
+            twiss_init="preserve",
+            targets=targets,
+            vary=vary,
+        )
+
+
+def luminosity_leveling_ip1_5(
+    collider,
+    config_collider,
+    config_bb,
+    cross_section,
+    crab=False,
+):
+    # Get Twiss
+    twiss_b1 = collider["lhcb1"].twiss()
+    twiss_b2 = collider["lhcb2"].twiss()
+
+    def compute_lumi(I):
+        luminosity = xt.lumi.luminosity_from_twiss(
+            n_colliding_bunches=config_collider["config_lumi_leveling_ip1_5"][
+                "num_colliding_bunches"
+            ],
+            num_particles_per_bunch=I,
+            ip_name="ip1",
+            nemitt_x=config_bb["nemitt_x"],
+            nemitt_y=config_bb["nemitt_y"],
+            sigma_z=config_bb["sigma_z"],
+            twiss_b1=twiss_b1,
+            twiss_b2=twiss_b2,
+            crab=crab,
+        )
+        return luminosity
+
+    def f(I):
+        luminosity = compute_lumi(I)
+
+        PU = (
+            luminosity
+            / config_collider["config_lumi_leveling_ip1_5"]["num_colliding_bunches"]
+            * cross_section
+            * twiss_b1["T_rev0"]
+        )
+        penalty_PU = max(
+            0,
+            (PU - config_collider["config_lumi_leveling_ip1_5"]["constraints"]["max_PU"]) * 1e35,
+        )
+
+        return (
+            abs(luminosity - config_collider["config_lumi_leveling_ip1_5"]["luminosity"])
+            + penalty_PU
+        )
+
+    # Do the optimization
+    res = minimize_scalar(
+        f,
+        bounds=(
+            1e10,
+            float(config_collider["config_lumi_leveling_ip1_5"]["constraints"]["max_intensity"]),
+        ),
+        method="bounded",
+        options={"xatol": 1e7},
+    )
+    if not res.success:
+        logging.warning("Optimization for leveling in IP 1/5 failed. Please check the constraints.")
+    else:
+        print(
+            f"Optimization for leveling in IP 1/5 succeeded with I={res.x:.2e} particles per bunch"
+        )
+    return res.x, compute_lumi(res.x)
 
 
 if __name__ == "__main__":

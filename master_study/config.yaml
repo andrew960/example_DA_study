@@ -1,19 +1,21 @@
-'root':
-  setup_env_script: 'none'
+"root":
+  setup_env_script: "none"
   generations:
     1: # Build the particle distribution and base collider
-      job_folder: '../../master_jobs/1_build_distr_and_collider'
+      job_folder: "../../master_jobs/1_build_distr_and_collider"
       job_executable: 1_build_distr_and_collider.py # has to be a python file
       files_to_clone: # relative to the template folder
-        - optics_specific_tools_hlhc15.py
-      run_on: 'local_pc'
+        - optics_specific_tools.py
+      run_on: "local_pc"
+      htc_job_flavor: "espresso" # optional parameter to define job flavor, default is espresso
+      singularity_image: "/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/cdroin/da-study-docker:latest" #../da-study-docker_latest.sif
     2: # Launch the pymask and prepare the colliders
-      job_folder: '../../master_jobs/2_configure_and_track'
+      job_folder: "../../master_jobs/2_configure_and_track"
       job_executable: 2_configure_and_track.py # has to be a python file
       files_to_clone:
         - misc.py
-      run_on: 'local_pc' # 'htc'  
-      htc_job_flavor: 'tomorrow' # optional parameter to define job flavor, default is espresso
+      run_on: 'htc_docker' #'htc' #'slurm' #'slurm_docker'
+      htc_job_flavor: "tomorrow" # optional parameter to define job flavor, default is espresso
+      singularity_image: "/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/cdroin/da-study-docker:latest" #../da-study-docker_latest.sif
   # Children will be added below in the script 001_make_folders.py
   children:
-

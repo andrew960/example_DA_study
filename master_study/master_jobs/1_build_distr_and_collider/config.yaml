@@ -8,10 +8,10 @@ config_particles:
 config_mad:
   # Links to be made for tools and scripts
   links:
-    acc-models-lhc: ../../../../modules/hllhc15 #/afs/cern.ch/eng/lhc/optics/HLLHCV1.5
+    acc-models-lhc: ../../../modules/hllhc16
 
   # Optics file
-  optics_file: acc-models-lhc/flatcc/opt_flathv_75_180_1500_thin.madx # round/opt_round_150_1500_thin.madx #
+  optics_file: acc-models-lhc/strengths/flat/opt_flathv_500_2000_thin.madx
 
   # Beam parameters
   beam_config:
@@ -32,7 +32,7 @@ config_mad:
 
   # Optics version, for choice of correction algorithms
   # (ver_lhc_run or ver_hllhc_optics)
-  ver_hllhc_optics: 1.5
+  ver_hllhc_optics: 1.6
   ver_lhc_run: null
 
   # Parameters for machine imperfections
@@ -53,4 +53,7 @@ config_mad:
     par_on_errors_NLC: 0
     par_write_errortable: 1
 
-log_file: 'tree_maker.log'
+log_file: "tree_maker.log"
+
+# to make some specifics checks
+sanity_checks: true

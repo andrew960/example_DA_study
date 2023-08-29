@@ -34,3 +34,16 @@ master_study/submission_files/*
 # Old analysis
 master_study/old/*
 
+# AFS files
+.__afs*
+
+# Tests done in the master jobs folder
+master_study/master_jobs/1_build_distr_and_collider/collider/
+master_study/master_jobs/1_build_distr_and_collider/particles/
+master_study/master_jobs/1_build_distr_and_collider/temp/
+master_study/master_jobs/2_configure_and_track/*.log
+master_study/master_jobs/2_configure_and_track/correction/
+master_study/master_jobs/2_configure_and_track/*.parquet
+
+#vscode config
+.vscode/
